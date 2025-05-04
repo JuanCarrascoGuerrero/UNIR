@@ -1,0 +1,21 @@
+.container{
+    background-color: antiquewhite;
+    /*Aplicamos flexbox en padre*/
+    /*Distribución económica de los espacios*/
+    display: flex;
+    /* Distibuimos tipo row (default) Column, column inverse
+    row inverse, etc..  --> flex-direction: row;*/
+    
+
+}
+
+.caja{
+    background-color: aquamarine;
+    border: 1px solid red;
+    padding: 1rem;
+    /*Completamos especio del flex container con flex-grow*/
+    flex-grow: 1;
+}
+.especial{
+    flex-grow: 2;
+}

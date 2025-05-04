@@ -1,0 +1,40 @@
+
+/*Body por defecto tiene un margin en navegadores*/
+body{
+    padding: 0;
+    margin: 0;
+}
+
+/*Añadimos un outer (Espacio fijo en los margenes para que
+el contenido "respire")*/
+.header{
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.row1{
+    /*default row*/
+    display: flex;
+    flex-direction: row;
+    /*Espaciar columnas*/
+    justify-content: space-between;
+}
+
+.row2{
+    display: flex;
+    flex-direction: row;
+    /*gap entre elementos de row2*/
+    gap: 12;
+}
+
+.principal-nav_list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.caja-buscador{
+    /*Por defecto es 0, al ponerlo a 1 ocupa todo el espacio disponible*/
+    flex-grow: 1;
+}

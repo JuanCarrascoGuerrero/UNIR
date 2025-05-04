@@ -1,0 +1,148 @@
+h3{
+    color: chartreuse;
+}
+
+/*reglas css*/
+
+/*Todos los elementos de ese tag*/
+body{
+    background-image: url(https://plus.unsplash.com/premium_photo-1701534008693-0eee0632d47a?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8d2Vic2l0ZSUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D);
+}
+
+/*Elementos concretos por atributo '.class'*/
+.div1{
+    color: darkgreen;
+}
+
+
+.caja{
+    /*--------------------------------------Atributos de contenedores*/
+
+    background-color: red;
+    padding: 10px 20px 30px 40px;
+    /*Es lo mismo que:
+    padding-top, padding-right, padding bottom y padding-left
+    En MARGIN es la misma dinámica
+    */
+    margin: 20px;
+    /*Es lo mismo que border-width, border-style y border-color (todos son necesarios en este caso*/
+    border: 1px solid green;
+
+    width: 50%;  /*>---Medida relativa*/
+    height: 300px;
+
+    /*--------------------------------------Atributos de texto*/
+    color: wheat;
+    font-size: 1.5rem;
+    font-weight: bold; /*Realmente es un shortcut de 700, normal seria 400, light 300, etc...*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /*Verdana, si eldispositivo no tiene tipografías a continuación*/
+    line-height: 20px; /*Salto de linea*/
+    text-align: center; /* 'justify' reparte espacios para completar el container*/
+}
+
+/*Si dejamos el cursor en el objeto vemos la ESPECIFICIDAD*/
+
+/*(ID,CLASS,TIPO)*/
+.btn{
+    color: white;
+    background-color: red;
+    display: inline-block;
+    border-radius: 4px;
+    border: none;
+}
+
+/*Hojas de estilo en cascada, el background color del anterior es sobrescrito (misma especifidad 'btn')*/
+.btn{
+    background-color: blue;
+}
+/*Esta no sobrescribe a btn, es más específico, sobrescribiendo solo los btn-special*/
+.btn.btn-special{
+    background-color: green;
+}
+/*Esta tiene especificad ID, siendo singular para ese id*/
+#the-button{
+    background-color: black;
+    color: white;
+}
+
+/*HERENCIA de algunas propiedades*/
+.caja2{
+    color: red; /*Texto en el div class caja2 hereda propiedades*/
+    width: 50%; /*Esta prop. no es heredable, texto sigue ocupando el 100% de padre*/
+}
+
+
+.cajapadre{
+    background-color: aqua;
+    width: 50%;
+}
+
+.cajahija{
+    background-color: azure;
+    width: 50%;
+    /*OJO! Añade padding y border al sizing de cajahija cuperando el 50% de width defeinido*/
+    padding: 10px;
+    border: 5px solid green;
+    /*Solucionamos con propiedad box-sizing*/
+    box-sizing:border-box;
+}
+
+/* ¿Queremos que todas las cajas se comporten como box-sizing:border-box? */
+/*SELECTOR UNIVERSAL*/
+*{
+    box-sizing: border-box;
+}
+
+/*Generamos una variable mediante --nombre y llamamos mediante var(--nombre)*/
+.cuadrado{
+    background-color: blueviolet;
+    --size: 200px;
+    width: var(--size);
+    height: var(--size);
+}
+
+/*Al ser class especificas de cuadrado (ver HTML) heredan configuración width/height con --size*/
+.otrocuadrado{
+    background-color: brown;
+    --size: 100px;
+}
+
+.cuadradogigante{
+    background-color: chocolate;
+    --size:300px
+}
+
+/*Estas custom properties --nombre pueden globalizarse*/
+
+:root{
+    --color-principal: red;
+}
+
+.btn-global{
+    background-color: var(--color-principal);
+    color: white;
+    display: inline-block; /*Ajusta contenido*/
+    /*Con position absolute podemos mover el elemento
+    en relación a padre raiz -> body*/
+    position: absolute;
+    bottom: 0.01px;
+    left:100px;
+}
+
+.btn-transicion{
+    display: inline-block;
+    padding: 1rem;
+    background-color: red;
+    color: white;
+    /*Efecto en transicion? Propiedad transition*/
+    transition: background-color 2s ease-in-out;
+}
+
+/*Transicion cuando :hover*/
+.btn-transicion:hover{
+    background-color: blue;
+}
+
+
+
+
