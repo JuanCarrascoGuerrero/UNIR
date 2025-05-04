@@ -1,0 +1,39 @@
+
+.padre{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /*fr, fracciones de unidad*/
+    grid-template-rows: 50px 50px;
+}
+
+.columna{
+    grid-row: 1/3; /*Empieza en fila 1 hasta fila 3*/
+}
+
+.layout{
+    display: grid;
+    grid-template-areas: 
+    /*1ª fla*/ 'header header header header'
+    /*2ª fla*/ 'main main main sidebar'
+    /*3ª fla*/ 'footer footer footer footer';
+}
+
+.header{
+    background-color: green;
+    grid-area: header;
+}
+
+.main{
+    background-color: red;
+    grid-area: main;
+}
+
+.sidebar{
+    background-color: blue;
+    grid-area: sidebar;
+}
+
+.footer{
+    background-color: black;
+    color: white;
+    grid-area: footer;
+}

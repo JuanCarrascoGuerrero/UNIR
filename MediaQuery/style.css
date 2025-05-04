@@ -1,0 +1,13 @@
+
+.padre{
+    background-color: red;
+}
+
+/*CSS Condicional*/
+/*Cuando el min width sea 700px...*/
+@media (min-width: 700px){
+    .padre{
+        background-color: blue;
+        display: flex;
+    }
+}

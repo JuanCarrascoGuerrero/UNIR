@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario ejemplo</title>
+</head>
+<body>
+    <!--Genera URL + ? -> Los parámetros a enviar por el formulario -->
+    <!--Parámetros recogidos en form mediante atributo name=""-->
+    <form action="URL a donde va">
+        <!--Relaccion label-input con FOR-ID-->
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="name">
+        
+        <!--Relaccion label-input con FOR-ID-->
+        <label for="opt">Favoritos</label>
+        <select name="options" id="opt">
+            <!--values son id para servidor-->
+            <option value="op1">Opcion1</option>
+            <option value="op2">Opcion2</option>
+            <option value="op3">Opcion3</option>
+        </select>
+
+        <!--Lanza el action-->
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
