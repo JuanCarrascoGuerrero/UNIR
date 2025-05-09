@@ -1,0 +1,7 @@
+Incluir imágenes vacias para maquetar con size a elección?
+https://placehold.co/600x400
+
+felix.blanco@unir.net
+
+normalize.css ¿Que es?
+
