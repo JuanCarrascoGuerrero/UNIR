@@ -2,16 +2,16 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: white;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: white;
     padding: 20px;
-    color: white;
+    color: black;
 }
 
 nav ul {
@@ -27,7 +27,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: white;
+    color: black;
     font-weight: bold;
 }
 
@@ -44,12 +44,20 @@ nav ul li a:hover {
     font-weight: bold;
 }
 
+.contact-button-white {
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 2px solid #333;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
 section {
     background: white;
     margin: 20px;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
 }
 
 h2 {
@@ -66,6 +74,84 @@ button {
 
 button:hover {
     background-color: #005bb5;
+}
+
+.number-price{
+    font-size:xx-large;
+}
+
+.icons-opt{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    gap: 2vw; /* Gap scales with viewport width */
+    margin-top: 5vh; /* Adjusts spacing relative to screen height */
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 30%; /* Limits width of each item */
+    gap: 2vw;
+}
+
+.icon img {
+    width: 3vw; /* Scales image based on viewport width */
+    height: auto;
+}
+
+.text-mini{
+    font-size: 0.8rem; 
+    text-align: left;
+}
+
+.offer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.offer-image {
+    position: relative;
+    flex: 1;
+    width: 100%;
+    height: 100%; /* Placeholder height for header image */
+    background-color: #ddd; /* Placeholder background */
+    border-radius: 5px;
+}
+
+.green-overlayed {
+    position: absolute;
+    top: 10px; /* Positions button slightly down from the top */
+    left: 10px; /* Positions button slightly inward from the left */
+    padding: 5px 10px;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+
+.offer-image img {
+    width: 100%; /* Ensures the image does not overflow */
+    height: auto;
+    border-radius: 5px;
+}
+
+.offer-text {
+    flex: 1;
+    width: 100%;
+    height: 100%; /* Placeholder height for header image */
+    padding: 2%;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.pricing{
+    display: flex;
+    gap: 8%;
 }
 
 .accessories-container {
@@ -85,9 +171,20 @@ button:hover {
 
 .accessory-image {
     width: 100%;
-    height: 100px; /* Placeholder height for header image */
+    height: auto; /* Placeholder height for header image */
     background-color: #ddd; /* Placeholder background */
     border-radius: 5px;
+}
+
+.accessory-image img {
+    width: 100%; /* Ensures the image does not overflow */
+    height: auto;
+    border-radius: 5px;
+}
+
+.accessory-text { /* Placeholder height for header image */
+    padding: 2%;
+    text-align: left;
 }
 
 .badge {
@@ -104,6 +201,10 @@ button:hover {
     background-color: red;
 }
 
+.red-text {
+    color: red;
+}
+
 .blue {
     background-color: blue;
 }
@@ -111,6 +212,21 @@ button:hover {
 .accessory h3 {
     margin-top: 10px;
     color: #333;
+}
+
+.form-style{
+    display: flex;
+    width: 100%;
+}
+
+.form-column-a{
+    flex: 3;
+    padding: 3vw;
+}
+
+.form-column-b{
+    flex: 2;
+    padding: 3vw;
 }
 
 form input {
@@ -159,6 +275,11 @@ footer p {
         margin: 10px 0;
     }
 
+    .offer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .accessories-container {
         flex-direction: column;
         align-items: center;
@@ -174,5 +295,10 @@ footer p {
         padding: 20px;
         border-radius: 5px;
         text-align: center;
+    }
+
+    .form-style{
+        flex-direction: column;
+        text-align: left;
     }
 }
