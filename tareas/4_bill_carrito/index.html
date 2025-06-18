@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+    <script type="module" src="products.js"></script>
+    <script type="module" src="carrito.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header__title">agoodshop</div>
+    </header>
+    <hr />
+    <section class="tray">
+      <div class="table__container">
+        <table class="table__tray">
+          <thead class="table__head">
+          <tr class="column__headers__r">
+            <th class="column__header col-producto">Producto</th>
+            <th class="column__header col-cantidad">Cantidad</th>
+            <th class="column__header col-unidad">Unidad</th>
+            <th class="column__header col-total">Total</th>
+          </tr>
+          </thead>
+          <tbody class="table__body">
+            <!-- Rows del template inyectados aquí -->
+          </tbody>
+        </table>
+      </div>
+      <div class="billing">
+        <div class="billing__container">
+          <p class="billing_header">Total</p>
+          <div class="products__to__bill">
+            <!-- Rows del template inyectados aquí -->
+          </div>
+          <table class="total__billing">
+            <td class="table__cell-bill total-text">TOTAL</td>
+            <td class="table__cell-bill total"></td>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!--TEMPLATES-->
+    <template id="table-row-template">
+      <tr>
+        <td class="table__cell producto">
+            <p class="title__product"></p>
+            <p class="ref__product"></p>
+        </td>
+        <td class="table__cell cantidad">
+            <p class="increase">+</p>
+            <input type="number" class="quantity-input" min="1" step="1" />
+            <p class="decrease">-</p>
+        </td>
+        <td class="table__cell unidad"></td>
+        <td class="table__cell total"></td>
+      </tr>
+    </template>
+
+    <template id="billing__rows">
+      <table>
+        <tr>
+          <td class="table__cell-bill producto"></td>
+          <td class="table__cell-bill precio"></td>
+        </tr>
+      </table>
+    </template>
+  </body>
+</html>

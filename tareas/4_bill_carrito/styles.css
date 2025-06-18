@@ -1,0 +1,77 @@
+
+.header__title {
+  font-weight: 900;
+  font-size: large;
+  margin:1.2rem;
+  color: rgb(74, 71, 71);
+}
+
+.tray{
+    display: flex;
+    gap: 1.2rem;
+}
+
+.table__container {
+  flex: 2;
+  width: 100%; /* Previene overflow */
+  margin:1.2rem;
+}
+
+.table__tray {
+  width: 100%;
+  table-layout: fixed; /* Ensures widths are respected */
+}
+
+.billing {
+  flex: 1;
+  width: 100%;
+  margin:1.2rem;
+}
+
+.billing__container{
+    background-color: darkgray;
+}
+.col-producto {
+  width: 40%;
+  text-align: left;
+}
+
+.col-cantidad {
+  width: 30%;
+  text-align: left;
+}
+
+.col-unidad,
+.col-total {
+  width: 15%;
+  text-align: left;
+}
+
+.table__cell.cantidad {
+  display: flex;
+  vertical-align: middle;
+  gap: 0.5rem; 
+  margin-top: 1rem;
+}
+
+.increase,
+.decrease {
+  margin: 0;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+/* Eliminar flechitas en WebKit (Chrome, Safari) */
+.quantity-input::-webkit-outer-spin-button,
+.quantity-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Eliminar flechitas en Firefox */
+.quantity-input {
+  -moz-appearance: textfield;
+  width: 1rem;
+  height: 1rem;
+}
