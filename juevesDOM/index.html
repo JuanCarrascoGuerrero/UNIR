@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <button class="btn2">OREJA</button>
+
+    <a href="https://www.unir.net/" class="enlace"> Ir a UNIR </a>
+    <h1>Hello World!</h1>
+    <h1 class="title">Hello mundo</h1>
+    <ul class="unordered">
+      <li class="item">Hola</li>
+      <li class="item">Hola</li>
+      <li class="item">Hola</li>
+      <li class="item">Hola</li>
+      <li id="unico" class="item">Hola</li>
+    </ul>
+    <ul class="unordered">
+      <li class="item2">1</li>
+      <li class="item2">1</li>
+      <li class="item2">1</li>
+      <li class="item2">1</li>
+      <li class="item2">1</li>
+      <li class="item2">1</li>
+      <li class="item2">1</li>
+      <li class="item2">1</li>
+      <li id="unico" class="item">Hola</li>
+    </ul>
+
+    <form action="URL a donde va" id="formulario">
+      <input type="text" name="datosASubmit" id="idForm" />
+      <button type="submit">Enviar</button>
+    </form>
+
+    <button onclick="orejas()">Mayuscula</button>
+
+    <ul id="listadoin"></ul>
+
+    <!--Mejor practica, a traves de clases e ids-->
+    <button class="btn">Vlick</button>
+
+    <ul class="listado"></ul>
+
+    <ul class="listadoComplejo"></ul>
+
+    <!--Codigo HTML oculto-->
+    <template id="listado-template">
+      <li>
+        <span class="title"></span>
+        <span class="price"></span>
+      </li>
+    </template>
+    <!--Incrusta en el siguiente ul, 
+    necesita un objeto visible DOM donde incrustar el amigo invisible...TEMPLATE-->
+    <ul id="lista-productos"></ul>
+
+    <!-- PARA EL EJERCICIO 4
+        <table>
+            <th>
+                <td>Producto</td>
+                <td>Cantidad</td>
+                <td>Unidad</td>
+                <td>Total</td>
+            </th>
+            <tr>
+                <td></td>
+            </tr>
+        </table>-->
+  </body>
+</html>

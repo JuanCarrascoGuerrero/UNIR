@@ -1,0 +1,21 @@
+Originalmente los navegadores tenían distinta literatura según uno u otro.
+Por ejemplo, si Internet Explorer definia:
+
+document.queryIe('.btn')
+
+Firefox podía definirlo como...
+
+document.findElement('.btn')
+
+Consecuencia: GUERRA DE NAVEGADORES
+
+1ª apareció JQUERY para resolver este problema:
+		$('btn')     Para todos los navegadores
+		por dentro hace...
+			if(ie)       document.queryIe('.btn')
+			if(Firefox)  document.findElement('.btn')
+			…
+
+Después llego el proyecto JS Vanila que nativamente desarrollaba métodos para todos los navegadores
+
+	document.querySelector('.btn')
