@@ -28,8 +28,14 @@
   margin:1.2rem;
 }
 
+.billing_header{
+  margin: 1rem;
+}
+
 .billing__container{
     background-color: darkgray;
+      padding: 1rem; /* ← this gives the .billing_header and others room */
+  box-sizing: border-box;
 }
 .col-producto {
   width: 40%;
@@ -59,6 +65,41 @@
   margin: 0;
   font-weight: bold;
   cursor: pointer;
+}
+
+.products__to__bill table {
+  width: 100%;
+  table-layout: fixed; /* Optional: makes column widths predictable */
+}
+
+.table__cell-bill {
+  padding: 0.5rem 1rem;
+  vertical-align: middle;
+}
+
+.table__cell-bill.producto {
+  text-align: left;
+  width: 70%;
+}
+
+.table__cell-bill.precio {
+  text-align: right;
+  width: 30%;
+}
+
+.total__billing {
+  padding: 0.5rem 1rem;
+  vertical-align: middle;
+}
+
+.table__cell-bill.total-text {
+  text-align: left;
+  width: 70%;
+}
+
+.table__cell-bill.total {
+  text-align: right;
+  width: 30%;
 }
 
 

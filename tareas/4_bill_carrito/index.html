@@ -36,6 +36,7 @@
           <div class="products__to__bill">
             <!-- Rows del template inyectados aquí -->
           </div>
+          <hr class="billing-separator" />
           <table class="total__billing">
             <td class="table__cell-bill total-text">TOTAL</td>
             <td class="table__cell-bill total"></td>
@@ -53,7 +54,7 @@
         </td>
         <td class="table__cell cantidad">
             <p class="increase">+</p>
-            <input type="number" class="quantity-input" min="1" step="1" />
+            <input type="number" class="quantity-input" min="1" max="99" step="1" />
             <p class="decrease">-</p>
         </td>
         <td class="table__cell unidad"></td>
