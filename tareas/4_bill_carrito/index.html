@@ -4,11 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carrito</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="normalized.css" />
+    <!-- JS -->
     <script type="module" src="script.js"></script>
     <script type="module" src="products.js"></script>
     <script type="module" src="carrito.js"></script>
   </head>
+
+
   <body>
     <header>
       <div class="header__title">agoodshop</div>
@@ -46,6 +51,8 @@
     </section>
 
     <!--TEMPLATES-->
+
+    <!-- tbody de la tabla Producto/Cantidad/Unidad/Total-->
     <template id="table-row-template">
       <tr>
         <td class="table__cell producto">
@@ -61,7 +68,7 @@
         <td class="table__cell total"></td>
       </tr>
     </template>
-
+    <!-- tabla factura productos seleccionados-->
     <template id="billing__rows">
       <table>
         <tr>
