@@ -49,8 +49,8 @@ const init = () => {
 
     // --------------------------------------------------------------------- (A + templates)
     clone.querySelector(".title__product").textContent = item.title;
-    clone.querySelector(".ref__product").textContent = item.SKU;
-    clone.querySelector(".unidad").textContent = item.price;
+    clone.querySelector(".ref__product").textContent = `Ref: ${item.SKU}`;
+    clone.querySelector(".unidad").textContent = `${item.price}${item.currency}`;
 
     /////////////////////////////////////////////////////////////////////////ELEMENTOS HTML DINÁMICOS
     // Variables de ekementos dinámicos: btones */- e input de cantidades
@@ -113,7 +113,7 @@ const init = () => {
     //actualiza filas tablas FACTURACION/BILLING
     function updateBillingRow() {
       const quantity = parseInt(input.value) || 0;
-      const price = item.price;
+      const price = item.price; 
       const total = calculateLineTotal(quantity, price);  //FUNCION CARRITO que calcula cantidad*precio
       const id = item.SKU;
                                                     //data set para IDentificar por SKU filas en el billing
