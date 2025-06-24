@@ -13,7 +13,6 @@
     <script type="module" src="carrito.js"></script>
   </head>
 
-
   <body>
     <header>
       <div class="header__title">agoodshop</div>
@@ -23,13 +22,18 @@
       <div class="table__container">
         <table class="table__tray">
           <thead class="table__head">
-          <tr class="column__headers__r">
-            <th class="column__header col-producto">Producto</th>
-            <th class="column__header col-cantidad">Cantidad</th>
-            <th class="column__header col-unidad">Unidad</th>
-            <th class="column__header col-total">Total</th>
-          </tr>
+            <tr class="column__headers__r">
+              <th class="column__header col-producto">Producto</th>
+              <th class="column__header col-cantidad">Cantidad</th>
+              <th class="column__header col-unidad">Unidad</th>
+              <th class="column__header col-total">Total</th>
+            </tr>
           </thead>
+          <tr>
+            <td colspan="4">
+              <hr class="header-separator" />
+            </td>
+          </tr>
           <tbody class="table__body">
             <!-- Rows del template inyectados aquí -->
           </tbody>
@@ -56,16 +60,27 @@
     <template id="table-row-template">
       <tr>
         <td class="table__cell producto">
-            <p class="title__product"></p>
-            <p class="ref__product"></p>
+          <p class="title__product"></p>
+          <p class="ref__product"></p>
         </td>
         <td class="table__cell cantidad">
-            <p class="increase">+</p>
-            <input type="number" class="quantity-input" min="1" max="99" step="1" />
-            <p class="decrease">-</p>
+          <p class="increase">+</p>
+          <input
+            type="number"
+            class="quantity-input"
+            min="1"
+            max="99"
+            step="1"
+          />
+          <p class="decrease">-</p>
         </td>
         <td class="table__cell unidad"></td>
         <td class="table__cell total"></td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <hr class="products-separator" />
+        </td>
       </tr>
     </template>
     <!-- tabla factura productos seleccionados-->

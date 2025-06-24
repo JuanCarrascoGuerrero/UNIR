@@ -8,7 +8,7 @@ export function calculateLineTotal(cantidad, price) {
 
 export function calculateInvoiceTotal(formattedPrices = []) {
   return formattedPrices.reduce((sum, priceString) => {
-    const numeric = parseFloat(priceString.replace(/[^\d.]/g, "")) || 0;
+    const numeric = parseFloat(priceString.replace(/[^\d.]/g, "")) || 0; //casteo float
     return +(sum + numeric).toFixed(2);
   }, 0);
 }

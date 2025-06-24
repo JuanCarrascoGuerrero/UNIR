@@ -1,20 +1,19 @@
-
 .header__title {
   font-weight: 900;
-  font-size: large;
-  margin:1.2rem;
+  font-size: 1.3rem;
+  margin: 1.2rem;
   color: rgb(74, 71, 71);
 }
 
-.tray{
-    display: flex;
-    gap: 1.2rem;
+.tray {
+  display: flex;
+  gap: 1.2rem;
 }
 
 .table__container {
   flex: 2;
   width: 100%; /* Previene overflow */
-  margin:1.2rem;
+  margin: 1.2rem;
 }
 
 .table__tray {
@@ -22,41 +21,54 @@
   table-layout: fixed; /* Ensures widths are respected */
 }
 
+.title__product {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.ref__product {
+  font-size: 0.6rem;
+}
+
 .billing {
   flex: 1;
   width: 100%;
-  margin:1.2rem;
+  margin: 1.2rem;
 }
 
-.billing_header{
+.billing_header {
   margin: 1rem;
 }
 
-.billing__container{
-    background-color: darkgray;
-      padding: 1rem; /* ← this gives the .billing_header and others room */
+.billing__container {
+  background-color: rgb(245, 244, 244);
+  padding: 1rem; /* ← this gives the .billing_header and others room */
   box-sizing: border-box;
 }
+
 .col-producto {
   width: 40%;
   text-align: left;
+  font-weight: lighter;
 }
 
 .col-cantidad {
   width: 30%;
   text-align: left;
+  font-weight: lighter;
 }
 
 .col-unidad,
 .col-total {
   width: 15%;
   text-align: left;
+  font-weight: lighter;
 }
 
 .table__cell.cantidad {
   display: flex;
   vertical-align: middle;
-  gap: 0.5rem; 
+  gap: 0.5rem;
   margin-top: 1rem;
 }
 
@@ -70,6 +82,15 @@
 .products__to__bill table {
   width: 100%;
   table-layout: fixed; /* Optional: makes column widths predictable */
+}
+
+.total__billing {
+  width: 100%;
+  table-layout: fixed; /* Optional: makes column widths predictable */
+}
+
+.billing_header {
+  font-weight: bold;
 }
 
 .table__cell-bill {
@@ -87,6 +108,14 @@
   width: 30%;
 }
 
+.table__cell-bill.total-text {
+  font-weight: bold;
+}
+
+.table__cell-bill.total {
+  font-weight: bold;
+}
+
 .total__billing {
   padding: 0.5rem 1rem;
   vertical-align: middle;
@@ -102,6 +131,10 @@
   width: 30%;
 }
 
+.products-separator {
+  border-top: 1px solid beige;
+  margin: 0.5em 0;
+}
 
 /* Eliminar flechitas en WebKit (Chrome, Safari) */
 .quantity-input::-webkit-outer-spin-button,
@@ -113,6 +146,28 @@
 /* Eliminar flechitas en Firefox */
 .quantity-input {
   -moz-appearance: textfield;
-  width: 1rem;
-  height: 1rem;
+  width: 2rem;
+  height: 1.5rem;
+  text-align: center;
+}
+
+/*CSS Condicional*/
+/*Cuando el min width sea 700px...*/
+@media (max-width: 886px) {
+  .tray {
+    flex-direction: column;
+  }
+
+  /* formatos de pantalla pequeños, oculta columna total */
+  .col-total {
+    display: none;
+  }
+  .table__body .total {
+    display: none;
+  }
+
+  /* ajusta hr de 4 a 3 colspan */
+  .table__tray tr > td[colspan="4"] {
+    colspan: 3; 
+  }
 }
