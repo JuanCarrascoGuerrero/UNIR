@@ -10,7 +10,9 @@ let data //<-- Globalización de los datos en la clase
 async function fetchFromAPI(url) {                                      
   const res = await fetch(url);
   if (!res.ok) throw new Error(`Error HTTP ${res.status}`);
-  const info = await res.json();  //...p spread operator, toma todo lo que ya hay (evitamos redundancias codificando)
+  const info = await res.json(); 
+  
+                                //...p spread operator, toma todo lo que ya hay (evitamos redundancias codificando)
   return info.products.map(p => ({ ...p, currency: info.currency })); //mapeamos para crear un Array con los datos del JSON, 
                                                                       // añadiendo atribtuo currency en cada JSON
 }
@@ -19,9 +21,9 @@ async function fetchFromAPI(url) {
 async function loadData() {
   try {
     data = await fetchFromAPI('https://jsonblob.com/api/1385066399118057472');
-    console.log("✅ Datos cargados desde la API");
+    console.log("Datos cargados desde la API");
   } catch (err) {
-    console.warn("⚠️ Error al cargar API. Usando datos locales...", err.message);
+    console.warn("Error al cargar API. Usando datos locales...", err.message);
     data = new Products().getData(); // Datos desde archivo local
   }
 
@@ -36,9 +38,9 @@ document.addEventListener("DOMContentLoaded", loadData);
 
 //INIT una vez tenemos DOM y datos
 const init = () => {
-  const tbody = document.querySelector(".table__body");                   // (A) TBODY DE PRODUCTOS/CANTIDAD/PRECIOS
+  const tbody = document.querySelector(".table__body");                   // (TEMPLATE A) TBODY DE PRODUCTOS/CANTIDAD/PRECIOS
   const template = document.querySelector("#table-row-template");         //template del anterior
-  const billingContainer = document.querySelector(".products__to__bill"); // (B) FILAS DE PRODUCTO/PRECIO TOTAL A FACTURAR
+  const billingContainer = document.querySelector(".products__to__bill"); // (TEMPLATE B) FILAS DE PRODUCTO/PRECIO TOTAL A FACTURAR
   const billingTemplate = document.querySelector("#billing__rows");       //template del anterior
   
   //FOR EACH (item) de los datos
@@ -47,7 +49,7 @@ const init = () => {
     //CLONE de nodes de HTML template para ir rellenando con datos de items***********************************
     const clone = template.content.cloneNode(true);
 
-    // --------------------------------------------------------------------- (A + templates)
+    // --------------------------------------------------------------------- (TEMPLATE A)
     clone.querySelector(".title__product").textContent = item.title;
     clone.querySelector(".ref__product").textContent = `Ref: ${item.SKU}`;
     clone.querySelector(".unidad").textContent = `${item.price}${item.currency}`;
@@ -66,7 +68,7 @@ const init = () => {
     input.value = 0;        //Inicializamos input de cantidad a 0
     handleQuantityChange(); //(Q)   Listener de cambios en cantidad de productos alerta
 
-    tbody.appendChild(clone);//.................................... appendChild Clone (A)
+    tbody.appendChild(clone);//.................................... appendChild Clone (TEMPLATE A)
 
     // Listener "+" click
     increaseBtn.addEventListener("click", () => {
@@ -123,13 +125,13 @@ const init = () => {
       if (quantity > 0) {
         // No hay ese SKU en el Billing, añadir fila con datos de ese item
         if (!existing) {
-          // --------------------------------------------------------------------- (B + templates)
+          // --------------------------------------------------------------------- (TEMPLATE B)
           const clone = billingTemplate.content.cloneNode(true);
           const row = clone.querySelector("tr");
           row.dataset.id = id; // marca única para este producto
           row.querySelector(".producto").textContent = item.title;
           row.querySelector(".precio").textContent = `${total}${item.currency}`;
-          billingContainer.appendChild(clone);//.................................... appendChild Clone (B)
+          billingContainer.appendChild(clone);//.................................... appendChild Clone (TEMPLATE B)
           // Item con ese SKU ya en billing, solo modificar el total
         } else {
           existing.querySelector(".precio").textContent = `${total}${item.currency}`;

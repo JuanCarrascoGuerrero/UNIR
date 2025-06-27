@@ -6,7 +6,7 @@
 }
 
 .formulario__wrapper {
-  background-color: #e0f0ff; 
+  background-color: #e0f0ff; /* Light blue */
   border-radius: 12px;
   padding: 24px;
   max-width: 400px;
@@ -17,7 +17,7 @@
 .formulario {
   display: flex;
   flex-direction: column;
-  gap: 16px; 
+  gap: 16px; /* Space between inputs */
 }
 
 
@@ -33,7 +33,7 @@
 }
 
 .formulario-date input[type="date"] {
-  width: 150px;                 
+  width: 150px;                 /* Set width here instead */
 }
 
 .formulario-date{
@@ -67,6 +67,11 @@ textarea {
   text-align: right;
   color: #555;
   margin-top: 4px;
+}
+
+/* Auto-grow effect */
+textarea:focus {
+  outline: none;
 }
 
 .imagen-noticia{

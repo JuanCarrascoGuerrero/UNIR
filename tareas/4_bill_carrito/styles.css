@@ -12,13 +12,12 @@
 
 .table__container {
   flex: 2;
-  width: 100%; /* Previene overflow */
+  width: 100%; 
   margin: 1.2rem;
 }
 
 .table__tray {
   width: 100%;
-  table-layout: fixed; /* Ensures widths are respected */
 }
 
 .title__product {
@@ -42,7 +41,7 @@
 
 .billing__container {
   background-color: rgb(245, 244, 244);
-  padding: 1rem; /* ← this gives the .billing_header and others room */
+  padding: 1rem; 
   box-sizing: border-box;
 }
 
@@ -81,12 +80,10 @@
 
 .products__to__bill table {
   width: 100%;
-  table-layout: fixed; /* Optional: makes column widths predictable */
 }
 
 .total__billing {
   width: 100%;
-  table-layout: fixed; /* Optional: makes column widths predictable */
 }
 
 .billing_header {
@@ -158,7 +155,7 @@
     flex-direction: column;
   }
 
-  /* formatos de pantalla pequeños, oculta columna total */
+  /* formatos de pantalla pequeños, oculta columna total del carrito*/
   .col-total {
     display: none;
   }
