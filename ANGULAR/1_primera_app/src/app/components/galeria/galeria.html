@@ -1,0 +1,8 @@
+
+<img [src]="arrayImagenes[imagenGal].url" [alt]="arrayImagenes[imagenGal].title">
+<figcaption>{{arrayImagenes[imagenGal].title}}</figcaption>
+
+<div class="botones">
+    <button (click)="cambiaImg($event)" id="prev">PREV</button>
+    <button (click)="cambiaImg($event)" id="next">NEXT</button>
+</div>

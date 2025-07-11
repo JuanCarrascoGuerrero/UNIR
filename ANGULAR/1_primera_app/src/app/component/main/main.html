@@ -1,16 +1,38 @@
 <p>main works!</p>
 <hr>
 
-<!--INTERPOLACION-->
+<!-------------------------------------INTERPOLACION  TS => HTML-->
 <h1 class="rojo">Nombre: {{nombre}}</h1>
 
 <!--Innterpolacion para atributos-->
 <h1 class="{{color}}">Nombre: {{nombre}}</h1>
-<h1 [class]="color">Nombre: {{nombre}}</h1>
+<h1 [class]="color">Nombre: {{nombre}}</h1><!--Más apropiado para atributos: BINDING-->
 <p>{{getNombre()}}</p>
 
-<!--SIGNAL-->
+<!---------------------------------------SIGNAL-->
 <p>Contador: {{contador()}}</p>
 
 <!--Cada cambio aqui recarga ¡¡¡¡Toda la página!!!!-->
 <p>Numero: {{numero}}</p>
+
+<!----------------------------------------BINDING  HTML => TS-->
+<!--Comunicacion HTML => TS   Event binding-->
+<button (click)="cambiaColor(color)">Click</button>
+<!--Comunicacion HTML => TS   Property binding-->
+<div class="caja" [style]="estiloCaja" [class]="miClase"></div>
+    <!--Variante del anterior usando bool Property binding-->
+<div class="caja" [class.sombra]="estado"></div>
+
+
+<!--EJERCICIOS DESARROLLO-->
+                                    <!--$ en events de angular-->
+<!--Si necesito capturar algo del propio elemento que lanza el evento, tengo que pasarle $event-->
+<select (change)="seleccionarCiudad($event)">
+    <option value="">Selecciona una ciudad</option>
+    <option value="madrid">Madrid</option>
+    <option value="paris">Paris</option>
+    <option value="londres">Londres</option>
+</select>
+<p>En que ciudad vives: {{ciudadSeleccionada}}</p>
+
+<!--Boton rojo-verde ejecuta caja debajo color rojo o verde con texto 'rojo' o 'verde' dentro-->

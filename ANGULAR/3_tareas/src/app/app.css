@@ -1,0 +1,21 @@
+.flex {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto; /*spaces aside*/
+  flex-wrap: wrap; /*quiero elegir el tamaño % de mis elemntos*/
+}
+.form {
+  width: 40%;
+}
+.column {
+  width: 60%;
+}
+
+@media (width<800px) {
+  .form {
+    width: 100%;
+  }
+  .column {
+    width: 100%;
+  }
+}

@@ -1,0 +1,16 @@
+<app-hobbies-list></app-hobbies-list>
+<hr>
+<section class="flex">
+   <app-user-card nombre="Juan" email="j@mail.com" foto="https://randomuser.me/api/portraits/men/41.jpg"/>
+   <app-user-card nombre="Default" email="def@mail.com" foto=""/> 
+    <app-user-card nombre="Maria" email="ma@mail.com" foto="https://randomuser.me/api/portraits/women/41.jpg"/>
+    <app-user-card nombre="Rodrigo" email="rod@mail.com" foto="https://randomuser.me/api/portraits/men/40.jpg"/> 
+</section>
+
+<!--Desarrollemos ahora usando property binding de array de objetos-->
+<hr>
+<section class="flex">
+   <app-user-card [nombre]="arrayUsuarios[0].nombre" [email]="arrayUsuarios[0].email" [foto]="arrayUsuarios[0].foto"/>
+   <app-user-card [nombre]="arrayUsuarios[1].nombre" [email]="arrayUsuarios[1].email" [foto]="arrayUsuarios[1].foto"/>
+   <app-user-card [nombre]="arrayUsuarios[2].nombre" [email]="arrayUsuarios[2].email" [foto]="arrayUsuarios[2].foto"/>
+</section>

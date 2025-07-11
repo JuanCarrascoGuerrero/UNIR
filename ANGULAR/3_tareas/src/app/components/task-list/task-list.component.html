@@ -1,0 +1,8 @@
+<!--Antiguamente ngFor  DEPRECATED-->
+
+<!--Iterar estructuras de HTML de elementos de un array en TS-->
+<!--   @for    (elemento   of   arrayEnTS    ;   track ID)    {tarea...}-->
+
+@for(tarea of tareas; track tarea){
+    <app-task-card [miTarea]="tarea"></app-task-card>
+}

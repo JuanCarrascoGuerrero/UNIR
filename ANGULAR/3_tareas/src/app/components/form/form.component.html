@@ -1,0 +1,26 @@
+<!--Con TWO WAY DATA BINDING olvidamos de <form> y de atributos name=""-->
+<div class="form">
+  <div>
+    <!--Recuerda for(label)<>id(input) los relaciona-->
+    <label for="titulo">Titulo</label>
+    <input type="text" name="" id="titulo" [(ngModel)]="newTask.titulo"/>
+  </div>                              <!--Magia TWDB de FormsModule-->
+  <div>                                         <!--[(ngModel)]-->
+    <label for="prioridad">Prioridad</label>
+    <select id="prioridad" [(ngModel)]="newTask.prioridad">
+      <option value="">Selecciona una opción</option>
+      <option value="urgente">Urgente</option>
+      <option value="diaria">Diaria</option>
+      <option value="Mensual">Mensual</option>
+    </select>
+  </div>
+  <div>
+    <label for="tiempo">Tiempo</label>
+    <input type="number" id="tiempo" [(ngModel)]="newTask.tiempo"/>
+  </div>
+  <button (click)="guardarTarea()">Guardar tarea</button>
+        <!--Si hubiera que pasarle algo del boton guardarTarea($event)-->
+        <!--Ejemplo: Si button tubiera "id=idBoton" y quisieramos pasarlo a la funcion-->
+
+  <!--No hay input:submit, recuerda TWO WAY DATA BINDING hace forms sin <form>-->
+</div>

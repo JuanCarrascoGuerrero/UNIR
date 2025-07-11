@@ -1,0 +1,21 @@
+
+<!-- * * * * * * *             TAREAS!               * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<div class="flex">
+<section class="form">
+
+  <!--Este [form.ts] esta EventEmitter un @Output (entre paréntesis)-->
+  <app-form (taskEmit)="saveTask($event)"></app-form> 
+            <!--Hay un elemento (ITask) del componente a recibir so... ($event)-->
+
+
+</section>
+<section class="column">
+                <!--Este [taskList.ts] recibe un @Input [entre corchetes]-->
+  <app-task-list [tareas]="arrayTask"></app-task-list>
+
+                <!--Tambien recibe array @Input para .reduce() al total-->
+  <app-total [tareas]="arrayTask"></app-total>
+</section>
+</div>

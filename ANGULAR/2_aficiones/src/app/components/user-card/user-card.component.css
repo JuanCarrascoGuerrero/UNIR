@@ -1,0 +1,9 @@
+.user{
+    background-color: whitesmoke;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px black;
+    border: 2px solid black;
+}
