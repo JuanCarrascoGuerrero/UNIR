@@ -1,0 +1,53 @@
+@if (!isLoading) { 
+  @if (user) {
+    <h2>ACTUALIZAR USUARIO</h2>
+  }@else{
+    <h2>NUEVO USUARIO</h2>
+  }
+
+<!-- condicionamos a userform para esperar que el await de getById carge IUser en ngOnInit-->
+@if (userForm) {
+<form [formGroup]="userForm" (ngSubmit)="getDataForm()" class="formStyle" >
+  <label for="name">Nombre Usuario</label>
+  <input type="text" id="name" formControlName="name" [class]="user?'red':''"/>
+  @if(checkControl("name","required")){
+  <p class="redError">El campo es obligatorio</p>
+  } @if(checkControl("name","maxlength")){
+  <p class="redError">Máximo 12 caracteres</p>
+  } @if(checkControl("name","minlength")){
+  <p class="redError">Mínimo 3 caracteres</p>
+  } @if(checkControl("name","pattern")){
+  <p class="redError">No estan permitidos carácteres extraños</p>
+  }
+  <label for="surname">Apellido Usuario</label>
+  <input type="surname" id="surname" formControlName="surname" [class]="user?'red':''"/>
+  @if(checkControl("surname","required")){
+  <p class="redError">El campo es obligatorio</p>
+  } @if(checkControl("surname","maxlength")){
+  <p class="redError">Máximo 12 caracteres</p>
+  } @if(checkControl("surname","minlength")){
+  <p class="redError">Mínimo 3 caracteres</p>
+  }@if(checkControl("surname","pattern")){
+  <p class="redError">No estan permitidos carácteres extraños</p>
+  }
+  <label for="email">Email Usuario</label>
+  <input type="email" id="email" formControlName="email" [class]="user?'red':''"/>
+  @if(checkControl("email","required")){
+  <p class="redError">El campo es obligatorio</p>
+  } @if(checkControl("email","maxlength")){
+  <p class="redError">Máximo 25 caracteres</p>
+  } @if(checkControl("email","minlength")){
+  <p class="redError">Mínimo 8 caracteres</p>
+  }@if(checkControl("email","pattern")){
+  <p class="redError">Formato de email no válido</p>
+  }
+  <label for="url">Imagen Usuario</label>
+  <input type="url" id="url" formControlName="url" [class]="user?'red':''"/>
+  @if(checkControl("url","required")){
+  <p class="redError">El campo es obligatorio</p>
+  }
+  <div class="submitButton">
+    <button type="submit">{{botontext}}</button>
+  </div>
+</form>
+} }

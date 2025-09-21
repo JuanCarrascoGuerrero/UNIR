@@ -1,0 +1,21 @@
+<div class="userGrid">
+  @for (user of usersPag; track user) { @if(user.id){
+  <app-user-card
+    [imgsrc]="user.image"
+    [nombre]="user.first_name"
+    [apellido]="user.last_name"
+    [username]="user.username"
+    [email]="user.email"
+    [_id]="user._id!"
+  ></app-user-card>
+  } }
+</div>
+
+<div class="paginator">
+  <button (click)="paginate(init - 1)" [hidden]="init === 1">
+    <img src="/img/prev.png" alt="detalle" width="24" height="24" />
+  </button>
+  <button (click)="paginate(init + 1)" [hidden]="max > arrayLength">
+    <img src="/img/next.png" alt="actualizar" width="24" height="24" />
+  </button>
+</div>

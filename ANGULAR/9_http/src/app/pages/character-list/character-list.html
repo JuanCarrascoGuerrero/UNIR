@@ -1,0 +1,24 @@
+<!--    OBSERVABLES
+<section class="observables">
+<ul>
+    @for(character of arrCharactersObservables; track character.id){
+        <li>{{character.name}}</li>
+    }
+</ul>
+</section>
+-->
+
+<section class="PROMISES">
+  <div class="d-flex justify-content-between py-2">
+    <button (click)="goToPrev()" class="btn btn-warning">PREV</button>
+    <button (click)="goToNext()" class="btn btn-warning">NEXT</button>
+  </div>
+
+  <div class="row g-4">
+    @for(character of arrCharactersPromises; track character.id){
+    <article class="col-12 col-md-6 col-lg-3">
+      <app-character-card [miCharacter]="character"></app-character-card>
+    </article>
+    }
+  </div>
+</section>

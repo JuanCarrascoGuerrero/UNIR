@@ -1,0 +1,32 @@
+
+<div [class]="mainwrapper">
+<!--Formulario-->
+<div [class]="formularioWraper">
+  <form [class]="formulario" (submit)="addNoticia($event)">
+    <p [class]="align">Nueva noticia</p>
+    <input type="text" name="titulo" id="form1" />
+    <textarea name="texto" id="form2" rows="3" maxlength="600"
+      (input)="updateCharCount($event)"></textarea>
+    <div class="char-counter">{{ texto.length }}/600</div>
+    <div [class]="formulariodate">
+        <input type="date" name="fecha" id="form3" />
+    </div>    
+    <input type="file" (change)="onFileSelected($event)" accept="image/*" />
+    <button type="submit">Publicar</button>
+  </form>
+</div>
+
+<!--Grid de noticias-->
+<!--templates en ANGULAR con *ngFor-->
+
+<div class="noticias__wrapper">
+  <div class="noticia__w" *ngFor="let noticia of noticias">
+    <hr />
+    <h3 class="titulo-noticia">{{ noticia.titulo }}</h3>
+    <p class="fecha-noticia">{{ noticia.fecha }}</p>
+    <img *ngIf="noticia.imagen" [src]="noticia.imagen" alt="Imagen de noticia" [class]="imgnoticia" />
+    <p class="texto-noticia">{{ noticia.texto }}</p>
+    <hr />
+  </div>
+</div>
+</div>

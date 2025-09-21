@@ -1,0 +1,39 @@
+<p [style.background-color]="'red'">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla est quis veniam
+  asperiores deserunt, incidunt et soluta ipsa nam voluptatibus aut aperiam
+  rerum adipisci? Ducimus corporis voluptatem debitis velit corrupti.
+</p>
+
+<p [style.font-size]="'9px'">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla est quis veniam
+  asperiores deserunt, incidunt et soluta ipsa nam voluptatibus aut aperiam
+  rerum adipisci? Ducimus corporis voluptatem debitis velit corrupti.
+</p>
+
+<!--¿No pones px?, no efecto-->
+<p [style.font-size]="9">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla est quis veniam
+  asperiores deserunt, incidunt et soluta ipsa nam voluptatibus aut aperiam
+  rerum adipisci? Ducimus corporis voluptatem debitis velit corrupti.
+</p>
+
+<!--solucion inteligente de los desarrolladores de angular-->
+<!-- añadir . medida-->
+<p [style.font-size.px]="9">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla est quis veniam
+  asperiores deserunt, incidunt et soluta ipsa nam voluptatibus aut aperiam
+  rerum adipisci? Ducimus corporis voluptatem debitis velit corrupti.
+</p>
+<p [style.font-size.rem]="2">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla est quis veniam
+  asperiores deserunt, incidunt et soluta ipsa nam voluptatibus aut aperiam
+  rerum adipisci? Ducimus corporis voluptatem debitis velit corrupti.
+</p>
+
+<p [style] = "estilos">  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla est quis veniam
+  asperiores deserunt, incidunt et soluta ipsa nam voluptatibus aut aperiam
+  rerum adipisci? Ducimus corporis voluptatem debitis velit corrupti.</p>
+
+  <p [class] = "{rojo:true, verde:false, azul:false}">  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla est quis veniam
+  asperiores deserunt, incidunt et soluta ipsa nam voluptatibus aut aperiam
+  rerum adipisci? Ducimus corporis voluptatem debitis velit corrupti.</p>

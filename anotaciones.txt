@@ -5,3 +5,24 @@ felix.blanco@unir.net
 
 normalize.css ¿Que es?
 
+
+https://www.unir.net/evento/openclass/por-que-tienes-que-formarte-para-ser-full-stack-developer/?utm_source=linkedin&utm_medium=post&utm_campaign=rrss_liked_org
+
+CDN Content Delivery Networks
+Son resursos online (como google fonts) y se llaman "Delivery Networks" porque
+se distribuyen en el mundo por zonas geógraficas. Erupoa tiene un CDN de googlefonts
+y américa tiene otro servidor de googlefonts...etc
+
+MPA -> MULTI PAGE APLICATION
+aplicación que navega de página en página
+
+SPA -> SINGLE PAGE APLICATION
+En una unica pagina. Se va recargando contenido en misma página según navegamos
+
+----------------------SOFTWARE
+
+Log de eventos de error, parecido a graylog
+SENTRY https://sentry.io/welcome/
+
+Mapas de calor y comportamiento mediante registro eventos JS
+HOTJAR   https://www.hotjar.com/es/

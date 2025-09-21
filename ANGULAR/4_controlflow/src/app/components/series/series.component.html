@@ -1,0 +1,46 @@
+<section class="series">
+  <h2>En ocasiones veo series</h2>
+  <hr />
+
+  <br />
+  <br />
+  <br />
+
+  <select (change)="getByCategory($event)">
+    <option value="">Selecciona una categoría</option>
+
+    <!--todo: Quitar duplciadas? haz un array sin duplicadas en el TS -->
+    @for (serie of arraySeries; track serie.id) {
+
+    <option [value]="serie.category">{{ serie.category }}</option>
+
+    }
+  </select>
+
+
+  <br />
+  <br />
+  <br />
+
+  <div class="flex">
+    @for (serie of arraySeries; track serie.id; let i = $index; let par = $even;
+    let impar = $odd; let primero = $first; let ultimo = $last) {
+
+    <article [class.impar]="impar" [class.par]="par" [class.ultimo]="ultimo">
+      <figure>
+        <img [src]="serie.poster" [alt]="serie.title" />
+      </figure>
+      <h3>{{ i }} - {{ serie.title }}</h3>
+      <p>Director: {{ serie.director }}</p>
+      <p>Categoría: {{ serie.category }}</p>
+      <p>PAR: {{ par }}</p>
+      <p>IMPAR: {{ impar }}</p>
+      <p>PRIMERA: {{ primero }}</p>
+      <p>ÚLTIMA: {{ ultimo }}</p>
+    </article>
+
+    }@empty {
+    <h2>NO HAY DATOS</h2>
+    }
+  </div>
+</section>

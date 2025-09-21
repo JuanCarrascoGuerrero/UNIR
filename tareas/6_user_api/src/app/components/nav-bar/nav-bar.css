@@ -1,0 +1,26 @@
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navBarOpt{
+    display:flex;
+    margin: 15px;
+    gap: 25px;
+    cursor: pointer;
+}
+
+.logo img {
+    height: 50px;  
+    width: 50px;       
+}
+
+@media(max-width:600px){   
+    .navBar {
+        flex-direction: column;
+    }
+    .navBarOpt {
+        flex-direction: column;
+    }
+}

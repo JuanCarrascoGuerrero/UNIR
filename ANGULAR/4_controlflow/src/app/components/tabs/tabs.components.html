@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>City Info with Articles</title>
+  </head>
+  <body>
+    <ul class="header-list">
+      @for (city of cityList; track city.id) {
+      <!--Binding con clase .activo css como resultado de lógica JS-->
+      <li
+        [class.activo]="currentSection === city.city"
+        (click)="changeSelection(city.city)"
+      >
+        {{ city.title }}
+      </li>
+      }
+    </ul>
+
+    @for (city of cityList; track city.id) { 
+        @if (currentSection === city.city){
+            <article>
+                <h2>{{ city.title }}</h2>
+                <p>{{ city.description }}</p>
+            </article>
+        } 
+    }
+  </body>
+</html>

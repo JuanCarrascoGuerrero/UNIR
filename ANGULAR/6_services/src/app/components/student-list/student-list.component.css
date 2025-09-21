@@ -1,0 +1,26 @@
+
+
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.flex article{
+    width: calc(33.33%-10px);
+}
+
+
+.marginBottom{
+    margin: 20px;
+}
+
+@media(width<=450){
+    .flex article{
+        width: 100%;
+    }
+}

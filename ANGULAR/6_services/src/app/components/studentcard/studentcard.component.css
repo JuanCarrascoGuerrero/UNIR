@@ -1,0 +1,12 @@
+
+.estudiante{
+    img{
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    border: 5px solid black;
+    border-radius: 20px;
+    overflow: hidden; /*mascara y groppear elementos de dentro*/
+    padding: 10px;
+}

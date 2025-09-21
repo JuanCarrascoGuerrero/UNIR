@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%; /* Ensures image fills its container */
+  height: auto; /* Maintains aspect ratio */
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.flex article {
+  width: calc(33.333% - 10px);
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+figure {
+  margin: 0;
+  overflow: hidden;
+  height: 200px; /* Fixed height for uniformity */
+}
+
+figure img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+
+/*par e impar de @for*/
+.impar{
+    border: 4px solid red;
+}
+.par{
+    border: 4px solid green;
+}
+
+/*ultimo del @for*/
+.ultimo{
+    width: 100%;
+}

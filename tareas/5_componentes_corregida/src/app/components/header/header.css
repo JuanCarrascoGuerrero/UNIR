@@ -1,0 +1,12 @@
+.center-header {
+    display: flex;
+    justify-content: center; 
+    align-items: center;  
+    /*técnica nesting, el span dentro de...
+    quivalente a -->   header span{...}
+    */  
+    span{
+        color: red;
+    } 
+}
+

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, SimpleChanges } from '@angular/core';
 import { ITask } from '../../interfaces/itask.interface';
 
 @Component({
@@ -26,10 +26,12 @@ export class TotalComponent {
 
   //Problema: Solo se ejecuta 1 vez! 
   //          Hay que buscar otra opcion que refresque los datos
-  ngOnInit(){
-    this.horas = this.tareas.reduce((acc,task)=>{
-      return acc + task.tiempo;
-    } , 0);
+  //ngOnInit(){  --------------------> ngOnChanges
+
+  //VER COMPONENTES/ciclovida.ts
+
+  ngOnChanges(changes:SimpleChanges){
+    this.horas = this.tareas.reduce((acc,task)=>acc + task.tiempo, 0);
   }
 
 }

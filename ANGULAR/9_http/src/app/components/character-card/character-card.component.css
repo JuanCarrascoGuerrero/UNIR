@@ -1,0 +1,22 @@
+/*figure{
+    background-size: ;
+    background-position: ;
+}*/
+
+figure:hover img{
+    transform: scale(1.15);
+}
+
+.imgBall{
+    min-height: 400px;
+    max-height: 400px;
+    object-position: center;
+    object-fit: contain;   /*respetando la proporcion de la imagen*/
+    transition: 1s;
+
+}
+
+.card{
+    cursor: pointer;   /*La manita*/
+}
+

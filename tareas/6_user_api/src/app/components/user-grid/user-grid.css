@@ -1,0 +1,22 @@
+.userGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap:10px;
+}
+
+.paginator{
+    display: flex;
+    gap: 30px;
+    padding: 50px;
+    justify-content: center;
+}
+
+@media(max-width:808px){   
+.userGrid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap:10px;
+}
+}

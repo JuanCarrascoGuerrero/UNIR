@@ -1,0 +1,11 @@
+<div class="card bg-dark border border-3 border-white">
+    <figure>
+        <img class="imgBall" [src]="miCharacter()?.image" [alt]="miCharacter()?.name" [routerLink]="['/character',miCharacter()?.id]">
+    </figure>
+    <div class="p-3 text-center">
+        <h3 class="text-white">
+            {{miCharacter()?.name}}
+        </h3>
+        <p class="text-warning">{{miCharacter()?.race}} - {{miCharacter()?.gender}}</p>
+    </div>
+</div>

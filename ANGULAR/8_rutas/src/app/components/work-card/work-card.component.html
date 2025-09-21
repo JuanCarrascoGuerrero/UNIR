@@ -1,0 +1,11 @@
+
+
+<div class="card bg-light p-3 text-center">
+    <h3>{{miServicio.title}}</h3>
+    <div>
+
+                    <!-- La coma del array de routerLink equivale a la '/'-->
+                     <!-- Ya tenemos un href que va a /estatica, dinámica-->
+        <a [routerLink]="['/servicios', miServicio.url]" class="btn btn-danger">Ver detalle</a>
+    </div>
+</div>

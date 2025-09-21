@@ -30,6 +30,7 @@
 .sidebar{
     background-color: blue;
     grid-area: sidebar;
+    color: white;
 }
 
 .footer{

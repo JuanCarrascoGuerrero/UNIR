@@ -1,0 +1,10 @@
+
+.formulario{
+    max-width: 500px;
+}
+
+.error{
+    font-size: 10px;
+    color: tomato;
+    margin: 0;
+}

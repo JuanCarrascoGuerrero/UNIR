@@ -1,0 +1,11 @@
+  
+  <div class="contador">
+    <!--🧠 signal son funciones() !-->
+    <p>{{contador()}}</p>
+    <button (click)="sumar()">+</button>
+    <button (click)="restar()">-</button>
+  </div>
+  <br><br>
+ <input type="text" (input)="cambiarTexto($event)">
+ <p>{{texto()}}</p>
+ <button (click)="reset()">RESET</button>

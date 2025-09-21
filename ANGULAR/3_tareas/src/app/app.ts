@@ -3,10 +3,11 @@ import { FormComponent } from "./components/form/form.component";
 import { TaskListComponent } from "./components/task-list/task-list.component";
 import { TotalComponent } from "./components/total/total.component";
 import { ITask } from './interfaces/itask.interface';
+import { Ciclovida } from "./components/ciclovida/ciclovida";
 
 @Component({
   selector: 'app-root',
-  imports: [FormComponent, TaskListComponent, TotalComponent],
+  imports: [FormComponent, TaskListComponent, TotalComponent, Ciclovida],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

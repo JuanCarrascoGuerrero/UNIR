@@ -1,0 +1,55 @@
+La aplicación tendrá las siguientes rutas:
+/home:          Carga el listado de usuarios completo.
+/user/1:        Carga la vista de usuario con todos sus datos. Numero de la ruta corresponde al id del usuario.
+/newuser:       Carga formulario que dará de alta un usuario siguiendo el api de creater user.
+/updateuser/1:  Se cargará reutilizando el formulario de registro los datos del usuario a actualizar para que se pueda actualizar los datos y mandárselos al api.
+
+API: https://peticiones.online/users
+Este api tiene los métodos/endpoints necesarios para resolver la práctica.
+
+/home         ---> pintareis un listado de usuarios en formato GRID (1.png)
+                BOTON "NUEVO USUARIO"
+                 Ir al formulario /newuser               
+                CARDS
+              foto usuario, nombre y tres botones (Ver detalle, Borrar y Actualizar)
+                 (Ver detalle) ir al detalle /user/1
+                 Ir al formulario de edición del usuario. (Actualizar).
+                 (Borrar) Mensaje de alerta "vamos a eliminar el usuario X". (3.png)
+/user/1       ---> Llegamos con click en boton Ver Detalle. (2.png). Tiene tres botones.
+                 (Volver) a listado 
+                 Ir al formulario de edición del usuario. (Actualizar).
+                 (Eliminar) Mensaje de alerta "vamos a eliminar el usuario X". (3.png)
+/newuser      --->  formulario (4.png) con todos los campos obligatorios
+               email válido y la imagen ruta de internet (no será un archivo físico).
+/updateuser/1 ---> mismo componente que /newuser... (5.png)
+                   ...pero con el texto actualizar usuario y el botón Actualizar
+                   Debe aparecer incialmente relleno con los datos actuales
+
+NOTA: En la documentación del api en la url que hemos puesto al principio
+tenéis los mensajes de Response (correcto) y Error para que los podáis
+gestionar dentro del vuestro frontEnd
+
+NOTA: Os recuerdo que el api que manejamos es de prueba y la respuesta
+que nos devuelve son válidas, pero no se ejecutan, es decir no esperéis que el
+usuario se añada a lista. La respuesta del api nos dará un OK o un KO
+dependiendo de si se ha ejecutado o no.
+
+RUBRICA:
+
+Criterio 1          Creación del proyecto.                                  1           10%
+Criterio 2          Creación de rutas y componentes.                        1.5         15%
+Criterio 3          Creación de interfaces y 
+                    servicios para conectar al api.                         1.5         15%
+Criterio 4          Vista home con la carga de todos los usuarios.          1.5         15%
+Criterio 5          Vista detalle del usuario con todos sus datos y los
+                    botones correspondientes.                               1.5         15%
+Criterio 6          Vista formulario de nuevo registro de usuario y su
+                    funcionalidad conectada con el api.                     1.5         15%
+Criterio 7          Actualización del usuario reutilizando el
+                    componente formulario del registro y conectarlo
+                    correctamente con el api.
+                                                                            1.5         15%
+
+
+
+ENTREGA: GitHub Y comprimido sin node_modules

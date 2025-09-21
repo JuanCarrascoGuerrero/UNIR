@@ -1,0 +1,21 @@
+
+
+
+
+
+
+
+<app-studentfiltros (edadFiltro)="filtraPorEdad($event)"></app-studentfiltros>
+
+<section class="flex">
+    @for(alumno of alumnos;track alumno){
+        <article>
+            <app-studentcard [miAlumno]="alumno"></app-studentcard>
+        </article>
+        
+    }@empty {
+        <h2>No hay resultados</h2>
+    }
+</section>
+
+

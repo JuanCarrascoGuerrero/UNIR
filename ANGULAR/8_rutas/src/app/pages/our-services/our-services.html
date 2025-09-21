@@ -1,0 +1,16 @@
+
+
+<section class="row g-3 p-4">
+
+@for(servicio of arrayTrabajos; track servicio.url){
+
+    <article class="col-12 col-md-6 col-lg-4">
+        <app-work-card [miServicio]="servicio"></app-work-card>
+    </article>
+
+    
+}
+
+</section>
+
+

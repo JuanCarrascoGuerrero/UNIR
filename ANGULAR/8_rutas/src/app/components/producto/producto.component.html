@@ -1,0 +1,18 @@
+
+
+
+<section class="card p-6 m-5">
+  <h1>{{ producto.title }}</h1>
+  <h1>Precio = {{ producto.price }}</h1>
+  <h1>Cantidad = {{ producto.quantity }}</h1>
+  <hr>
+  <section>     <!--Barra solo en primera, las comas son barras a partir de ahí-->
+    <a [routerLink]="['/productos',producto.id,'descripcion']" class="btn btn-danger">Descripcion</a>
+    <a [routerLink]="['/productos',producto.id,'origen']" class="btn btn-danger">Origen</a>
+      <router-outlet /> 
+  </section>
+</section>
+<a [routerLink]="['/productos']" class="btn btn-danger m-5">Volver</a>
+
+
+<!-- SI UN COMPONENTE TIENE RUTAS HIJAS TENEMOS QUE IMPORTAR LA ALCAYATA-->

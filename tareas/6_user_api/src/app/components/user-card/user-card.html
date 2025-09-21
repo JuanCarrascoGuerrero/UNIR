@@ -1,0 +1,51 @@
+<div [class]="user ? '' : 'cardContainer'">
+  <div [class]="user ? 'info_big' : 'info'">
+    <img
+      [src]="user ? user.image : imgsrc"
+      alt=""
+      [class]="user ? 'avatar_big' : 'avatar'"
+    />
+    @if(user){
+    <hr />
+    <table>
+      <td>
+        <tr>
+          <h1>{{ user.first_name }}</h1>
+        </tr>
+        <tr>
+          <h2>{{ user.last_name }}</h2>
+        </tr>
+        <tr>
+          <p><strong>Usuario:</strong>  {{ user.username }}</p>
+        </tr>
+        <tr>
+          <p><strong>Email:</strong>  {{ user.email }}</p>
+        </tr>
+        <tr class="botonera_big" >
+          <a (click)="eliminar(user._id!)" class="link">Eliminar</a>
+          <a [routerLink]="['/updateuser', user._id]" class="link">Actualizar</a>
+          <a [routerLink]="['/home']" class="link">Volver a listado</a>
+        </tr>
+      </td>
+    </table>
+    }
+  </div>
+  <div class="userinfo">
+    @if(!user){
+    <p class="texto">{{ nombre }}</p>
+    <p class="texto">{{ email }}</p>
+    } @if (!user) {
+    <div class="botonera">
+      <a [routerLink]="['/user', _id]"
+        ><img src="/img/search.png" alt="detalle" width="24" height="24"
+      /></a>
+      <a [routerLink]="['/updateuser', _id]"
+        ><img src="/img/refresh.png" alt="actualizar" width="24" height="24"
+      /></a>
+      <a (click)="eliminar(_id)"
+        ><img src="/img/trash.png" alt="eliminar" width="24" height="24" class="pointer"
+      /></a>
+    </div>
+    }
+  </div>
+</div>
