@@ -1,0 +1,19 @@
+<div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+  <table class="w-full text-sm text-left">
+    <thead class="text-xs bg-gray-900 text-white">
+      <tr>
+        <th scope="col" class="py-3 px-6">Nombre</th>
+        <th scope="col" class="py-3 px-6">Apellidos</th>
+        <th scope="col" class="py-3 px-6">Email</th>
+        <th scope="col" class="py-3 px-6">Departamento</th>
+        <th scope="col" class="py-3 px-6">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for(employee of arrEmployees; track employee._id){
+      <tr app-row-employee [myEmployee]="employee" (deleteEmployeeEmit)="getAlertDelete($event)"></tr>
+      }
+    </tbody>
+  </table>
+</div>
+<!--  aqui habria que cargar la de empleado con los botones de borrar actualizar y ver-->

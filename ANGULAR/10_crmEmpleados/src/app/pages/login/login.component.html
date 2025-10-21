@@ -1,0 +1,24 @@
+<section class="bg-gray-900 h-screen">
+  <div class="flex items-center justify-center min-h-screen">
+    <form #loginForm="ngForm" (ngSubmit)="getLogin(loginForm)"
+      class="w-full max-w-sm bg-white rounded-lg shadow-md p-6 space-y-6">
+      <h2 class="text-2xl font-bold text-center mb-4">Login</h2>
+      <div>
+        <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Email</label>
+        <input type="email" id="email" name="email" ngModel
+          class="form-input block w-full rounded-lg border border-gray-300 p-2.5 focus:ring-primary-500 focus:border-primary-500"
+          placeholder="Introduce tu email" required />
+      </div>
+      <div>
+        <label for="password" class="block mb-2 text-sm font-medium text-gray-900">Contraseña</label>
+        <input type="password" id="password" name="password" ngModel
+          class="form-input block w-full rounded-lg border border-gray-300 p-2.5 focus:ring-primary-500 focus:border-primary-500"
+          placeholder="Introduce tu contraseña" required />
+      </div>
+      <div>
+        <input type="submit" value="Logarse"
+          class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center cursor-pointer" />
+      </div>
+    </form>
+  </div>
+</section>
