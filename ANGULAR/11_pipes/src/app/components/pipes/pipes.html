@@ -1,0 +1,42 @@
+
+
+
+<p>{{nombre.toLowerCase()}}</p>
+
+<!--Un pipe, siempre antecedidos por '|' -->
+<!--Estamos en modo standAlone, es probable que haga falta importar el pipe en el TS-->
+<p>{{nombre | lowercase}}</p>
+<p>{{nombre | uppercase}}</p>
+<p>{{"en un lugar de la mancha" | titlecase}}</p> <!--each init leter capitalize-->
+<p>{{racional | number: "3.0-1"}}</p> <!--DecimalPipe, redondea decimales-->
+            <!--Pueden pasar parámetros ':' String parámetro (en el ejemplo 3 partes enteras y de 0 a 1 decimales)-->
+<p>{{iva | percent}}</p>
+<p>El {{iva|percent}} de 1000 es {{1000*iva}}</p>
+<p>Precio: {{precio | currency}}</p> <!--Por defecto el dolar-->
+<p>Precio: {{precio | currency:"JPY"}}</p> <!--Parametros, en ese caso el código de divisa-->
+
+<p>{{fecha | date: "dd/mm/yyyy"}}</p>
+<p>{{fecha | date: "fullDate"}}</p>
+
+<!--concatenar pipes-->
+<p>{{fecha | date: "fullDate" | lowercase}}</p>
+
+<!--Predefinidos
+'long'	June 15, 2015 at 9:03:01 AM GMT+1
+'full'	Monday, June 15, 2015 at 9:03:01 AM GMT+01:00
+'shortDate'	6/15/15
+'mediumDate'	Jun 15, 2015
+'longDate'	June 15, 2015
+'fullDate'	Monday, June 15, 2015
+'shortTime'	9:03 AM
+'mediumTime'	9:03:01 AM
+'longTime'	9:03:01 AM GMT+1
+'fullTime'	9:03:01 AM GMT+01:00
+-->
+
+<p>{{array}}</p>
+<p>{{array | json}}</p>
+<p>{{objeto}}</p>
+<p>{{objeto | json}}</p>
+
+<p>{{texto | recortarTexto: 20 :"..."}}</p>
