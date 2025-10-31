@@ -1,0 +1,47 @@
+Buenos días,
+
+¡gracias por vuestra participación!
+Hago un breve análisis del resultado de las encuestas.
+Jueves a las 18:00 y grabamos la reunión por si alguno no puede asistir.
+:-)
+
+Los responsables por entorno parecen quedar así:
+
+Front: Alex Baquero, 🐰👑 y Juan
+Back: Antony
+Pivotando: AndresJb Gallegos, Jony y 651775237
+
+Quedaría escojer entorno entre los pivotes
+...Ó que operen como pivotes y participen de los entornos que han seleccionado
+
+
+
+Ayer pedí a la IA Copilot de Microsoft sugerencias que puedan servir de ayuda en el desarrollo del proyecto y me ofreció tres documentos:
+
+1.- Plan de reuniones, tareas por entorno y herramientas por entorno
+2.- Borrador del modelo de BBDD
+3.- Propuesta de estructura de árbol de carpetas
+
+Los adjunto a este chat por si os son de utilidad.
+
+
+Buenos días,
+
+ayer tomé notas de lo que hablamos en la reunión.
+Seguro que me faltan apuntes. Animados quien quiera a añadir más.
+
+* Cuenta deseable para reuniones teams Microsoft365 UNIR
+* 1 Repositorio front y 1 back diferenciados
+* AIVEN recomendable para el repositorio back
+* Grupos 4 y 6 ya tienen esquema de base de datos
+* Recomendable publicar resumen de avances en el foro
+* Presentación del proyecto: 20 minutos
+* Gentzane portavoz de consultas generales del equipo ¿?
+* Alberto responsable BBDD ¿?
+* Antony auditoría SOLID del proyecto ¿?
+
+
+Añado propuestas internas, si estais de acuerdo, a raiz de nuestra participación.
+
+Alberto --> Responsable de Base de Datos
+Antony  --> Auditor SOLID del proyecto

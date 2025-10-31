@@ -15,7 +15,7 @@ server.listen(3000)
 
 /* Con estas líneas ya tendriamos un servidor back de peticiones.
 Sin embargo, aunque NODE nos vendia su servidor nativo como definitivo tiene limitaciones...
-    (*) Si tenemos muchas URL habría que generar [else if, else if, ...etc] por casa una
+    (*) Si tenemos muchas URL habría que generar [else if, else if, ...etc] por cada una
     (*) Además, habiendo verbos, else if para cada verbo [GET, PUT, DELETE, ....]
     (*) Esto esta SOLUCIONADO con algunos FRAMEWORKS, por ejemplo en el curso EXPRESS
 */

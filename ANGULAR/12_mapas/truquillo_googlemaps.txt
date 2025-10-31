@@ -1,0 +1,6 @@
+Para usar la API google Maps libre:
+
+entramos en la url de google clouds...
+quitamos tdo lo a derecha de la url principal \...
+enter
+Ahora entra, eso si, va a estar dando el coñaxo con lo del permiso y eso
