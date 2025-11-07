@@ -1,0 +1,20 @@
+GET http://localhost:3000/api/clientes
+###
+POST http://localhost:3000/api/clientes
+Content-Type: application/json
+
+{
+  "id": 21,
+  "nombre": "Stalone",
+  "apellidos": "Batecok",
+  "direccion": "15 Helena Terrace",
+  "email": "sbatecokk@imageshack.us",
+  "edad": 28,
+  "genero": "M",
+  "fecha_inscripcion": "2021-04-09T16:00:00",
+  "cuota": 16.90,
+  "fecha_nacimiento": "2017-04-27",
+  "dni": "309632997g",
+  "monitores_id": 21,
+  "staff_id": 12
+}

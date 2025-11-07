@@ -1,9 +1,11 @@
+
+// Config .env  LO PRIMERO LEER EL .ENV
+require("dotenv").config();
+
 // Server creation and configuration
 const http = require("node:http");
 const app = require("./src/app");
 
-// Config .env
-require("dotenv").config();
 
 // Server creation
 const server = http.createServer(app);

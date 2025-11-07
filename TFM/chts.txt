@@ -45,3 +45,116 @@ Añado propuestas internas, si estais de acuerdo, a raiz de nuestra participaci�
 
 Alberto --> Responsable de Base de Datos
 Antony  --> Auditor SOLID del proyecto
+
+Buenos días 
+
+confirmo acceso a ambos repositorios. Yo empezaría por consultas nativas (esta semana damos con Mario la capa Modelo), Gracias Jonatan.
+
+Consultas nativas informa objetos JS con los datos recuperados mediante scripts de base de datos. 
+ORM (Entidad relación) crea objetos JS que son mapas (diractamente relacionados) de las tablas de base de datos. Es decir, son objetos que mantienen las relaciones en el back de las habidas en base de datos (1 a 1, 1 a N, ManyToMany)
+
+
+Por favor, breve reunión de explicación una vez hayas completado el primer hito.
+
+Creo que están bastante claros los primeros objetivos. Además la asignación con etiquetas es correcta. 
+Lo que veo que falta es gente por asignarse el tablero (lo he señalado en rojo)
+
+Lo he leído (atentos a qué responden). Muy completo Gentzane, gracias. 
+
+@Compañeros del front, que el back nos está "pisando los talones". ¿Cuándo os viene mejor reunirnos esta semana?
+
+
+Mañana antes de la reunión con Juanan
+
+Gracias Alex, nos vemos entonces el Jueves de 18 a 19.
+Me parece bien. Figma creo que es interesante que nos compartas y autorizes al borrador para ir viendo la evolución en tiempo real incluso añadir comentarios. De esta manera también podríamos llegar a la reunión con más conocimientos. ¿Qué te parece? 
+ 
+Gentzane. He leido las tareas en Trello. Es un buen punto de partida. ¿Nos vemos mañana de 18 a 19? Así si surge alguna duda podemos consultarla con Juanan; incluso continuar despues de su clase si nos quedamos a medias.
+
+Me parece bien :-) He comprobado que aún no están en git. Podemos añadirlos mañana.
+Exacto. Users y Trips van a ser los más inmediatos. 
+¿Nos los repartimos mañana en la reunión? Así tengo tiempo de leer la documentación que preparo Alex que hoy he estado ocupado.
+
+¿Puedes compartir el link con el figma?
+diseño de las pantallas en figma (con su css, la parte de la maquetación)
+- una clase para las llamadas a la gestion de usuario
+- Una clase para las llamadas a la gestión de viajes
+- Una clase para las llamadas a la partipación de viajes
+- Una clase para las valaraciones
+- Una clase para los comentarios/foro.
+
+/home
+/login
+/register
+/profile
+/trips 
+/tripsList
+/tripsDetail
+/tripForm
+/viajes/:id (detalle)
+
+/foro
+
+
+path: "home", component: HomeComponent
+"login" LoginComponent
+"register" RegisterComponent"
+"profile" ProfileComponent"
+"trips" TripListComponent
+"trips/:idTrip"TripDetailComponent
+"newTrip" TripFormComponent
+"updateTrip/:idTrip" TripDetailComponent
+
+
+src/app/
+├── services/
+│    ├── comments.service.ts (Comentarios/Foro)
+│    ├── notifications.service.ts (Notificaiones email)
+│    ├── participations.service.ts (Participacion de Viajes)
+│    ├── ratings.service.ts (Valoraciones)
+│    ├── trips.service.ts (Gestion de viajes)
+│    ├── users.service.ts (Gestion de usuarios)
+
+pages/
+│    ├── home/
+│    ├── login/
+│    ├── register/
+│    ├── profile/
+│    ├── trips/
+│    │    ├── tripsList/
+│    │    ├── tripDetail/
+│    │    ├── tripForm/
+
+
+
+Buenos días,
+
+estoy al día con lo que hemos avanzado.
+
+He clonado el back en mi local. Dudas...
+Localizado en trello las configuraciones de entorno .env
+
+El archivo .env ¿es un env.js? ¿Javascript? 
+Tengo apuntes de un .env con librería Dotenv
+
+Perfecto. Un video explicativo puede clarificar las dudas que podamos compartir en una reunion a posteriori.
+
+En mi opinión, conviene desarrollar el proyecto rúbrica.
+Desde el front de agradecer un esquema bien definido, consensuado y estable.
+
+Muy interesante la investigación Andrés.
+Yo también estoy interesado en asistir y conocer nuestro desarrollo en AIVEN.
+
+En un primer análisis de la BBDD identifico nuevas tablas (en azul):
+* user_rating   -> Antes columna de la tabla users, ahora tabla independiente
+* notifications -> Nueva tabla 1 a n de users
+* join_requests -> Nueva tabla relaciona users y trips
+* trips_partic. -> Sustituye a la tabla eliminada (en rojo) trips_members. Atributos created y updated pasan a ser jonied_at. Status pasa a la nueva tabla join_request
+
+Se han añadido dos vistas (verde): v_trip_pub... y v_user_rati...
+
+Es mi resumen de los cambios que he observado. Entiendo que las valoraciones las tomaréis los compañeros de BBDD.
+
+Compañeros del front. He creado un branch de develop con aplicación de mis tareas. Prefiero hacer merge request en la reunion de mañana (18:00) ¿Os parece bien?
+
+
