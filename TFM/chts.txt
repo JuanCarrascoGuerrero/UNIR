@@ -157,4 +157,20 @@ Es mi resumen de los cambios que he observado. Entiendo que las valoraciones las
 
 Compañeros del front. He creado un branch de develop con aplicación de mis tareas. Prefiero hacer merge request en la reunion de mañana (18:00) ¿Os parece bien?
 
+Buenas noches,
+
+Gracias Alberto por partida doble, video explicativo y reciente commit en back.
+Por mi parte he revisado las url presentes en el documento inicial y las presentes en back develop. 
+
+Observo muchas diferencias.
+Nuevas, con distinta semántica o con distinto contenido.
+
+En base a la base de datos la considero muy completa.
+Asumo entonces que podemos evolucionar el documento inicial.
+
+Sin embargo no comprendo que no haya urls de las acordadas en el documento inicial. 
+(Las he señalado en rojo en el documento a continuación).
+¿Cómo lo justificamos?
+Me gustaría saber si ha habido alguna dificultad en el back o si la ausencia de dichos endpoints es resultado de un estudio de mejora.
+
 
