@@ -13,3 +13,10 @@ URL: /api/clientes
 Headers: ---
 Body: Objeto cliente
 Response: Objeto cliente creado, texto confirmación,...etc
+
+## Recuperar Un cliente
+Method: GET
+URL: /api/clientes/id
+Headers: ---
+Body: ---
+Response: datos del cliente

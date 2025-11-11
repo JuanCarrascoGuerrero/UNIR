@@ -1,20 +1,42 @@
-GET http://localhost:3000/api/clientes
+@URL = http://localhost:3000/api
+
+GET {{URL}}/clientes
 ###
-POST http://localhost:3000/api/clientes
+GET {{URL}}/clientes/146
+###
+PUT {{URL}}/clientes/150
 Content-Type: application/json
 
 {
-  "id": 21,
-  "nombre": "Stalone",
-  "apellidos": "Batecok",
-  "direccion": "15 Helena Terrace",
-  "email": "sbatecokk@imageshack.us",
+  "nombre": "Juanan",
+  "apellidos": "gomez",
+  "direccion": "1Hetr",
+  "email": "anasr@imageshack.us",
   "edad": 28,
   "genero": "M",
-  "fecha_inscripcion": "2021-04-09T16:00:00",
   "cuota": 16.90,
-  "fecha_nacimiento": "2017-04-27",
+  "fecha_nacimiento": "2010-04-27",
+  "dni": "309632997g"
+}
+
+###
+POST {{URL}}/clientes
+Content-Type: application/json
+
+{
+  "nombre": "Alvar",
+  "apellidos": "Gron",
+  "direccion": "1Hetr",
+  "email": "alvar@imageshack.us",
+  "edad": 28,
+  "genero": "M",
+  "fecha_inscripcion": "2025-04-09T16:00:00",
+  "cuota": 16.90,
+  "fecha_nacimiento": "2010-04-27",
   "dni": "309632997g",
   "monitores_id": 21,
   "staff_id": 12
 }
+
+###
+DELETE {{URL}}/clientes/150
