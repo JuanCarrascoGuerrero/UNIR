@@ -15,11 +15,11 @@ const getById = async (req,res) => {
   try {     
     //req.params para capturar la parte variable de una URL
     const{id} = req.params; //<-- Destruturin weno (Aqui me equivoqué... puse [clienteId] pero el parametro es :id asi que el destructuring viene de req.params.id y debe ser [id])
-    const cliente = await ClienteModel.getById(clienteId); 
+    // const cliente = await ClienteModel.getById(id); ESTO YA ESTA EN EL MIDDLEWARE!
     //vertiente negativa
     //404, es elegante devolver status pues en caso contrario devovlemos un 200
-    if(!cliente) return res.status(404); 
-    res.json(cliente); // devuelve el JSON con el cliente o nulo
+    //  if(!cliente) return res.status(404);  ESTO YA ESTA EN EL MIDDLEWARE!
+    res.json(req.cliente); // LO SETEAMOS EN EL MIDDLEWARE!
   } catch (error) {
     res.status(500).json({ error: 'Error al obtener cliente' });
   }
@@ -61,7 +61,7 @@ const create = async (req, res) => {
 const remove = async (req,res) => {
 
     const {id} = req.params;
-    const cliente = await ClienteModel.getById(id);
+    //const cliente = await ClienteModel.getById(id);  YA ESTA EN EL MIDDLEWARE
     /*const result =*/ await ClienteModel.removeCliente(id);
 
     //return res.json(result); // igual... nos devuelve un objeto con poca chicha
@@ -76,7 +76,9 @@ const remove = async (req,res) => {
         "changedRows": 0
         }
     */
-   return res.json(cliente);
+   return res.json({
+    message: 'Se ha borrado un cliente',
+    cliente : req.cliente}); //LO SETEAMOS EN EL MIDDLEWARE
 
 }
 

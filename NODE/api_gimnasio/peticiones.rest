@@ -1,6 +1,7 @@
 @URL = http://localhost:3000/api
 
 GET {{URL}}/clientes
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjMsImlhdCI6MTc2MzA1ODgxOX0.wyb1UrR5qXRG_VG7vqxJigybO_pJflBZsj3DEbep00Y
 ###
 GET {{URL}}/clientes/146
 ###
@@ -40,3 +41,22 @@ Content-Type: application/json
 
 ###
 DELETE {{URL}}/clientes/150
+
+###
+POST {{URL}}/usuarios/registro
+Content-Type: application/json
+
+{
+  "username":"req",
+  "email":"cr@mail.com",
+  "password":"12345"
+}
+
+###
+POST {{URL}}/usuarios/login
+Content-Type: application/json
+
+{
+  "email":"cr@mail.com",
+  "password":"12345"
+}
