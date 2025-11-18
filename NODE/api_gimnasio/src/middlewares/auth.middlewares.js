@@ -24,7 +24,28 @@ const checkToken = async (req,res,next) =>{
     if(!usuario){
         return res.status(401).json({message:'Error de autentificacion'});
     }
+    //Vamos a almacenar en req el usuario logado, puede ser muy util
+    req.user = usuario;
+
     next();
 }
 
-module.exports = {checkToken}
+const checkAdmin = (req,res,next) => {
+    //Ya tenemos usuario en req.user !! (mirar checkToken), sabíamos sería útil
+    if(req.user.rol !== 'admin'){
+        return res.status(403).json({message:'Zona solo para admin'})
+    }
+    next();
+    //Qué facil!...claro, ya tenemos estructura previa en checkToken
+}
+
+const checkRol = (rol = 'admin') => {
+    return (req,res,next) => {
+        if(req.user.rol !== rol){
+        return res.status(403).json({message:`Zona solo para ${rol}`})
+        }
+        next();
+    }
+}
+
+module.exports = {checkToken, checkAdmin, checkRol}

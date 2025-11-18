@@ -7,6 +7,7 @@ const selectById = async (usuarioId) =>{
         [usuarioId]);
   
     if(result.length===0) return null
+    console.log(result);
     return result;
 }
 
