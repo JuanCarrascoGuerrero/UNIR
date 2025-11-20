@@ -39,6 +39,7 @@ const checkAdmin = (req,res,next) => {
     //Qué facil!...claro, ya tenemos estructura previa en checkToken
 }
 
+//FUNCION QUE ENCAPSULA MIDDLEWARE PARA PODER USAR PARAMETRIZACIÓN
 const checkRol = (rol = 'admin') => {
     return (req,res,next) => {
         if(req.user.rol !== rol){

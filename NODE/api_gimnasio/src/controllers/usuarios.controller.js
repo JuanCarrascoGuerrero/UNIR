@@ -12,7 +12,7 @@ const register = async (req, res) => {
   //INSERTAR REGISTRO (y manejar errores, sino acaban en 500 como si la falta fuera nuestra)
   const resultado = await UsuarioModel.insert(req.body);
   //Devolver datos nuevo usuario y mensaje
-  const usuario = await UsuarioModel.selectById(resultado.id);
+  const usuario = await UsuarioModel.selectById(resultado.insertId);
   delete usuario.password;
   res.json({
     message: 'Usuario registrado con éxito',

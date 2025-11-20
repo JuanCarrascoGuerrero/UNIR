@@ -1,7 +1,7 @@
 @URL = http://localhost:3000/api
 
 GET {{URL}}/clientes
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjYsImlhdCI6MTc2MzM2MjQyN30.35NROMeW2ntN77GLHWZzZ4ARr8y39sB2L0jLjy97b2Y
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjEwLCJpYXQiOjE3NjM2NjI0MDl9.z8qZ0YGmSs4veW_TmhIM3Net-oYd1tynXMAtwSqrdjM
 ###
 GET {{URL}}/clientes/146
 ###
@@ -48,7 +48,7 @@ Content-Type: application/json
 
 {
   "username":"req",
-  "email":"cress@mail.com",
+  "email":"crede@mail.com",
   "password":"12345",
   "rol":"admin"
 }
@@ -58,6 +58,6 @@ POST {{URL}}/usuarios/login
 Content-Type: application/json
 
 {
-  "email":"cress@mail.com",
+  "email":"crede@mail.com",
   "password":"12345"
 }

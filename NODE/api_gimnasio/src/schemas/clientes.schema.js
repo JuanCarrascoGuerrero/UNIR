@@ -1,13 +1,11 @@
-const yup = required('yup');
+const yup = require('yup');
 
-const clienteSchema = yup.object(){
-  nombre: yup.string().required(),
-  "apellidos": "gomez",
-  "direccion": "1Hetr",
-  "email": "anasr@imageshack.us",
-  "edad": 28,
-  "genero": "M",
-  "cuota": 16.90,
-  "fecha_nacimiento": "2010-04-27",
-  "dni": "309632997g"
-}
+
+//OBJETO DEFINE TIPADO Y VALIDACIONES DE ELEMENTOS
+const clienteSchema = yup.object({ //que el body sea un objeto...
+  nombre: yup.string().required('El nombre es requerido'),  //que nombre sea string y es requerido...
+  apellidos: yup.string().required('Los apellidos son requeridos'), //etc...
+  email: yup.string().email('Formato de email incorrecto')
+});
+
+module.exports = {clienteSchema} //mirar routes, clientes controller y validation middleware

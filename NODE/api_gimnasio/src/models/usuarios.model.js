@@ -24,7 +24,7 @@ const insert = async ({username,email,password})=>{
             [username,email,password]
         );
                         //.query siempre devuelve -> Promise<[QueryResult, FieldPacket[]]>
-        return result[0]; 
+        return result; 
 }
 
 //RECUERDA EXPORTAR
