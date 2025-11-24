@@ -8,9 +8,12 @@
     "dev": "nodemon index.js"
   },
   "dependencies": {
+    "bcryptjs": "^3.0.3",
     "cors": "latest",
+    "dayjs": "^1.11.19",
     "dotenv": "latest",
     "express": "latest",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.20.0"
   },
   "devDependencies": {

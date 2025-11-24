@@ -173,4 +173,131 @@ Sin embargo no comprendo que no haya urls de las acordadas en el documento inici
 ¿Cómo lo justificamos?
 Me gustaría saber si ha habido alguna dificultad en el back o si la ausencia de dichos endpoints es resultado de un estudio de mejora.
 
+Buenos días Antony,
+
+he realizado una petición al back de registro de usuario con los siguientes resultados:
+
+Me falta configurar la clave JWT.
+Estamos a un paso de la comunicación :-)
+
+abro encuesta para elegir el nombre de la aplicación.
+La cierro el Viernes.
+travel together
+destour
+Súbete
+Tuvía
+Viajeroo
+compiRide
+
+Gracias Alberto,
+
+compruebo que la columna *users.avg_rating* antes FLOAT ahora está en formato DECIMAL. También que has añadido *reviews.title*. Me parece bien
+
+El motivo de añadir title a reviews es en base al siguiente diseño:
+
+Los mensajes del foro corresponden con la tabla messages, no con la de reviews
+
+
+¡Buena noticia!
+No hay branch de tu desarrollo en GiT.
+¿Alguna dificultad con GiT o aún no ha empezado?
+
+@Back
+Yo he estado testeando el registro de usuarios y observo lo siguiente:
+* Podemos grabar usuarios con username bizarros tipo: "- ---    -"
+*¿Añadimos validación al username de length y alfanumérica? ¿Algunos caracteres permitivos, tipo guión, puntos, etc?* Yo soy partidario de solo alfanuméricos.
+
+* Podemos grabar emails bizarros tipo: "juan@gmail@gmail@gmail.com"
+*¿Añadimos validaciones más detalladas en este campo?*
+
+* Hay validaciones que llegan al @front bastante detalladas tipo: "password min 8 chars". Les he dado visualización con el snack de angular/material que comentaba anteriormente. Creo que ya lo he comentado antes, están devolviendo un error 500.
+(imagen adjunta)
+
+Primeras conclusiones para register y login:
+¿Cómo administramos las validaciones? 
+
+Buen día compañeros.
+
+
+En la tabla trips_members tenemos la columna status.
+Esta columna identifica el estado de la relación user con trips.
+
+He testeado el registro con las recientes modificaciones añadidas en @back.
+Las validaciones son correctas. ¡Muchas gracias!
+He integrado la rama feature/login-debug en develop quitando las validaciones del formulario de registro, ahora administradas por el @back.
+
+Tengo anotadas posibilidades de desarrollo.
+Si terminamos con el proyecto rúbrica a tiempo las comparto.
+A partir de hoy tengo disponibilidad para prestar ayuda.
+
+
+He quitado componente Register 
+-> HomeComponent padre [LoginComponent hijo] 
+
+He quitado rutas front _/register_ y _/login_
+-> Single Page  *_/home_*
+
+¡Buenos días!
+
+Comunicación completada.
+Registro y Acceso con token.
+@Front, (Actualizado develop con los avances _en curso..._ y genero nueva rama _feature/login-debug_ para editar la version definitiva)
+
+Añado un report:
+- Errores tipo contraseña (min 8 char) no controlados en @front devuelven Error 500 en back ¿?
+- username y correo length en bbdd 150. ¿Lo limitamos en el @front, @back?
+
+
+Y unas dudas:
+- Registro en AIVEN primer usuario mailee@gmail.com, ¿podéis confirmar registro?
+- Errores @back, ¿Los devolvemos en formato IError{error:'mensaje de error'}?
+
+Buenos días,
+
+nuevos avances en @Front
+
+He creado la rama feature/user-slide para el desarrollo del slider de edición del perfil de usuario. Aproximando el diseño planteado en Figma ha quedado así:
+
+Dudas a partir de ahora:
+
+* En edición de Avatar (varchar en BBDD) tengo un evento click que abre explorador de archivos para seleccionar una imagen. El service de momento simula una carga de la imagen en un servicio almacen de imágenes/url
+*@back@bbdd ¿url o blob?*
+
+
+*En edición de user.interest. Tenemos el campo definido como Array[]. En caso de mantenerlo así hay dos opciones, split de comas o batería de inputs, es decir, conforme informamos un interés aparece un nuevo input inferior vacio consecutivamente (tipo añadir parada de google maps).
+*¿Que os parece mejor solución?*
+_En mi opinión esta columna es redundante con user.descripcion. Mantendría solo una de las dos como tipo string. Un text area donde el usuario pueda añadir su descripción personal_
+
+* No tenemos un avatar por defecto. En caso de no haber string definido en user.photo muestra imagen rota.
+*¿Añadimos if avatar null = default?¿Lo añadimos en el @Front o en @back?
+_Yo creo más solida la opción @back_
+
+* Tenemos columna review.score y user.avg_rating (media de los reviews). La primera tiene constraint 1 a 5
+*@bbdd ¿Añadimos mismo constraint a user.avg_rating?*
+*@todos ¿Añadimos el calculo de la media como proceso bbdd, back o front?*
+_A priori yo creo que bbdd es lo más consistente con un PROCEDURE_
+
+* En la API de getAllTrips esperamos objeto ITripResponse[] (array de tabla trips), así esta definido en el contrato inicial. Sin embargo @back esta enviando -> {data:array, paginación}.
+*¿A que se debe esta diferencia?¿Como procedemos?*
+
+
+
+-------------------------------
+
+¿Preguntamos a otros equipos y a los tutores o tomamos una decisión?
+* Opción varchar URL -> carpeta en servidor NODE ó Cloudinary,Firebase,Amazon…
+* Opción BLOB -> Considerar limites de carga en BBDD AIVEN
+
+
+Tienes razón Alberto. No está contemplado en el diseño original en Figma.
+¿Que sugieres Alex&Todos? Listado de intereses por defecto (tipo select), libre (tipo batería de inputs) u otra opción...
+¿Actualizamos Figma?
+
+Ok. Resolviendo el almacén de imágenes solo tendríamos que aplicarlo en el @front.
+
+Perfecto, trigger de bbdd entonces 
+
+Gracias Jony. 
+
+Gracias Betos
 

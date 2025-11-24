@@ -1,1 +1,68 @@
-GET http://localhost:3000/
+@HOST = http://localhost:3000
+
+GET {{HOST}}/api/products
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTI0NDEwYTAwMjU2ZTNkOTFmODM2NjAiLCJ1c2VyUm9sZSI6ImFkbWluIiwiZXhwIjoxNzYzOTg2MzQ0LCJpYXQiOjE3NjM5ODU3NDR9.oqeVx90IicM8jNauyiGmAQxNFCKfIDCNuKGYARnoVgs
+
+###
+GET {{HOST}}/api/products/69242d734ac7b856378cc552
+
+###
+GET {{HOST}}/api/products/cat/oficina
+
+###
+POST {{HOST}}/api/products
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTI0NDEwYTAwMjU2ZTNkOTFmODM2NjAiLCJ1c2VyUm9sZSI6ImFkbWluIiwiZXhwIjoxNzYzOTg2OTQ5LCJpYXQiOjE3NjM5ODYzNDl9.SR_gP5gnbcEUuABWB5c8PP5SObNNOCPTa8By2XiMEoc
+Content-Type: application/json
+
+{
+    "name": "Carbon",
+    "description": "mineral",
+    "price": 1200,
+    "category": "regalo",
+    "stock": 19,
+    "available": true
+}
+
+###
+POST {{HOST}}/api/users/register
+Content-Type: application/json
+
+{
+    "username": "juan",
+    "email": "juan@mail.com",
+    "password": "1234",
+    "role": "admin"
+}
+
+###
+POST {{HOST}}/api/users/login
+Content-Type: application/json
+
+{
+    "email": "juan@mail.com",
+    "password": "1234"
+}
+
+
+###
+PUT {{HOST}}/api/products/69242d734ac7b856378cc552
+Content-Type: application/json
+
+{
+    "name": "sacapunta",
+    "description": "metal",
+    "price": 3
+}
+
+###
+DELETE {{HOST}}/api/products/6924312166df717cfc2f6928
+
+
+###
+PATCH  {{HOST}}/api/users/add-cart
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTI0NDEwYTAwMjU2ZTNkOTFmODM2NjAiLCJ1c2VyUm9sZSI6ImFkbWluIiwiZXhwIjoxNzYzOTg4MDI1LCJpYXQiOjE3NjM5ODc0MjV9.1LMgn1anUwPYud_-K5rHje0PrCORp-5yw_5EmQ6cwak
+Content-Type: application/json
+
+{
+    "productId": "69244de3cf8f6e70770929b8"
+}
