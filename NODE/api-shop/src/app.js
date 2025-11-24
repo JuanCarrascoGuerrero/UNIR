@@ -18,6 +18,9 @@ app.get('/', async(req,res)=>{
 // import apiRoutes from './routes/api.routes.js';
  app.use('/api', apiRoutes);
 
+ //express middleware para descubrir rutas
+ app.use(express.static('public')) //<-- Todo lo accesible desde esta ruta no esta afectado por los middlewares
+                                  //ahora las imagenes son accesibles desde el FRONT !! :-)
 // 404 handler
 app.use((req, res, next) => {
   res.status(404).json({

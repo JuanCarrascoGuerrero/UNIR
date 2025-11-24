@@ -1,0 +1,31 @@
+<header>
+    <h1>Chat</h1>
+    <h2>Usuarios conectados: {{clientsCount}}</h2>
+</header>
+<main>
+<div class="chat-container">
+  <div class="messages">
+    @for(message of messages; track $index){
+        <li>
+            <strong>{{message.name}}</strong>
+            {{message.message}}
+        </li>
+    }
+  </div>
+</div>
+</main>
+<footer>
+    <form [formGroup]="chatForm" (ngSubmit)="onSubmit()">
+        <div class="input-area">
+            <label for="">Nombre</label>
+            <input type="text" formControlName="name"/>
+        </div>
+        <div class="input-area">
+            <label for="">Message</label>
+            <input type="text" placeholder="Escribe un mensaje..." formControlName="message"/>
+        </div>
+        <input type="submit" value="Enviar">
+    </form>
+</footer>
+
+

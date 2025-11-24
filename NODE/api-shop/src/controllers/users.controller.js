@@ -35,3 +35,8 @@ export const addToCart = async (req, res) => {
 
   res.json({message:'Producto agregado'})
 };
+
+export const profile = async (req, res) => {
+
+  res.json(req.user)
+};

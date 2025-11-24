@@ -14,7 +14,8 @@
     "dotenv": "latest",
     "express": "latest",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.20.0"
+    "mongoose": "^8.20.0",
+    "multer": "^2.0.2"
   },
   "devDependencies": {
     "nodemon": "latest"

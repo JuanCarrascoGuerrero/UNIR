@@ -4,6 +4,11 @@ GET {{HOST}}/api/products
 Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTI0NDEwYTAwMjU2ZTNkOTFmODM2NjAiLCJ1c2VyUm9sZSI6ImFkbWluIiwiZXhwIjoxNzYzOTg2MzQ0LCJpYXQiOjE3NjM5ODU3NDR9.oqeVx90IicM8jNauyiGmAQxNFCKfIDCNuKGYARnoVgs
 
 ###
+GET {{HOST}}/api/products/actives
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTI0NDEwYTAwMjU2ZTNkOTFmODM2NjAiLCJ1c2VyUm9sZSI6ImFkbWluIiwiZXhwIjoxNzYzOTk2MTUwLCJpYXQiOjE3NjM5OTU1NTB9.cDHX5n5fFMrN7wqPl4TX7xICwBLi0DDH_fnQZr7h9wQ
+
+
+###
 GET {{HOST}}/api/products/69242d734ac7b856378cc552
 
 ###
@@ -66,3 +71,7 @@ Content-Type: application/json
 {
     "productId": "69244de3cf8f6e70770929b8"
 }
+
+###
+GET {{HOST}}/api/users/profile
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTI0NDEwYTAwMjU2ZTNkOTFmODM2NjAiLCJ1c2VyUm9sZSI6ImFkbWluIiwiZXhwIjoxNzYzOTk1MDA1LCJpYXQiOjE3NjM5OTQ0MDV9.jkm0uA5Fe_p5kbBtuZjKG6NX8sz3mTL3Vj3CDRck5q0

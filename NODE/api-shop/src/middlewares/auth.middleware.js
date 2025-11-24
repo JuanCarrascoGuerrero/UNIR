@@ -16,7 +16,9 @@ export const checkToken = async (req,res,next) =>{
     }
     
     //Inetersante aqui guardar el usuario para tenerlo en routas posteriores
-    const user = await User.findById(data.userId)
+    const user = await User
+        .findById(data.userId)
+        .populate('cart', '-_id name price') //Populate mas inf en product controller
     if(!user){return res.status(403).json({message:'user no existe'})}
     
     //Modificamos la peticion, añadimos los datos de user
