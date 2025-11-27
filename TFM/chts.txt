@@ -301,3 +301,46 @@ Gracias Jony.
 
 Gracias Betos
 
+¡Buenos días!
+Ya esta en develop el @front del slider para editar perfil de usuario.
+No hay información de Intereses, me ha ajustado al diseño inicial.
+Abro branch para el pop up de solicitudes feature/petitions, última de las pantallas que tengo asignadas.
+
+@Back
+Ya tenemos un API para guardar imágenes
+_/api/users/:ID/avatar_
+Van en formato multipart/form-data
+
+he actualizado el documento en teams API-FRONT
+
+He añadido un control de errores recogiendo las excepciones enviadas desde back e imprimiéndolas directamente en un angularMaterial/snackbar 
+He montado un pipe en el método next() del interceptor global de la aplicación auth-interceptors.
+Tiene que afectar a toda las API aplicación (incluso /register ya que esta integrado con un /login consecutivo).
+
+-------------------------------
+
+Buenas tardes,
+he estado algunos días de reflexión, perdonad mi ausencia
+
+@Front
+Yo también siento gracias por tu actividad Gentzane :-)
+Mi desarrollo ya esta en develop. La pantalla:
+
+En el incluyo un Middleware pipe para formatear la fecha a "Del 28 octubre al 19 nociembre 2025"
+Está en la carpeta /util por si alguien quiere implementarlo:
+
+
+@Front@Back
+En la navegación.
+En el listado de "Mis viajes" aparecen todos.
+
+Yo pondría las solicitudes rechazadas con deshacer.
+Entiendo que es una API que añadir al estado pendiente.
+
+
+@Estilos
+En la solicitud de unirse no hay mensaje de éxito.
+
+Solo lo sabemos al intentarlo de nuevo.
+
+
