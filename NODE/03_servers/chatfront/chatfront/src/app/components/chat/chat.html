@@ -5,8 +5,8 @@
 <main>
 <div class="chat-container">
   <div class="messages">
-    @for(message of messages; track $index){
-        <li>
+    @for(message of messages; track $index){  <!--Potencia ANGULAR: CSS true/false conditionals en objetos...!!-->
+        <li class="list-group-item" [class]="{'owner':message.socketId === socket.id}">
             <strong>{{message.name}}</strong>
             {{message.message}}
         </li>

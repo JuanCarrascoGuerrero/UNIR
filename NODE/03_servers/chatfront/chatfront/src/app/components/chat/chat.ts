@@ -17,7 +17,7 @@ export class ChatComponent {
   messages : ChatMessage[] = [];
   clientsCount: number = 0;
 
-  chatForm = new FormGroup({
+  chatForm: FormGroup = new FormGroup({
     name: new FormControl(),
     message: new FormControl()
   });
@@ -35,7 +35,8 @@ export class ChatComponent {
   }
 
   onSubmit(){
-    console.log('Emitiendo')
+    console.log('Emitiendo');
+    this.chatForm.value.socketId = this.socket.id; //Modificamos objetos pre servidor para que adjunte el ID
     this.socket.emit('chat_message', this.chatForm.value)
         //evento emit('nombre de evento a elección',lo que enviamos)
     console.log( this.chatForm.value)
