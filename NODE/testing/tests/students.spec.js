@@ -1,7 +1,7 @@
 const request = require('supertest'); //libreria testear apis  de express
 const app = require('../src/app');
-const { default: mongoose } = require('mongoose');
-const mongoose = require(mongoose)
+require('dotenv').config(); //CARGA EL ENV QUE JEST NO SE ENTERA!!!
+const mongoose = require('mongoose')
 
 
 describe('API Students',  ()=>{
@@ -11,7 +11,7 @@ describe('API Students',  ()=>{
     //comviene primero testear las conexiones con base de datos...
 
     beforeAll(async ()=>{
-        await mongoose.connect('mongodb://localhost27017/api-students-test');
+        await mongoose.connect(process.env.MONGO_URL);
     })
 
     afterAll(()=>{
@@ -21,11 +21,13 @@ describe('API Students',  ()=>{
 
     let response;
 
+
+    describe('GET /api/students', ()=>{
+            //Ciclo de vida de las pruebas, para evitar duplicaods, etc...
     beforeAll(async ()=>{
         response = await request(app).get('/api/students').send();
     })
 
-    describe('GET /api/students', ()=>{
         it('deberia responder con status 200', async ()=>{
             //En before all ya estamos haciendo el request http api
             //al pasarle la app express aislada ¡¡no tenemos que levantar el servidor para ejecutar las pruebas!!
@@ -33,19 +35,20 @@ describe('API Students',  ()=>{
         })
 
         it('deberia responder JSON', async ()=>{
-            //Content-Type: application/json
+            //Content-Type: application/json        //Alternativas al toBe()
             expect(response.headers['content-type']).toContain('application/json');
         })
 
         it('deberia responder array de estudiantes', async ()=>{
-            //Content-Type: application/json
+            //Más alternativas al toBe()
+            console.log("BODY:", response.body);
             expect(response.body).toBeInstanceOf(Array);
         })
     })
 
-    describe('GET /api/students', ()=>{
+    /*describe('GET /api/students', ()=>{
         
-    })
+    })*/
 
 
 })

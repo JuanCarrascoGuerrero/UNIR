@@ -4,12 +4,12 @@ const express = require("express");
 
 const app = express();
 app.use(express.json());
-
+require('dotenv').config();
 
 // Route configuration
 // Example:
 const apiRoutes = require('./routes/api.routes.js');
-app.use('/api', apiRoutes);
+app.use('', apiRoutes);
 
 // 404 handler
 app.use((req, res, next) => {
